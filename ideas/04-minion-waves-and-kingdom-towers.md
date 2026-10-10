@@ -30,3 +30,13 @@
 3. Where exactly do Tier 3 war machines spawn, how frequently, and how many?
 4. Are Towers, Barracks, and Castle themselves destructible in standard MOBA progression? Overall answer presumed yes, detailed rules TBD.
 5. What happens when a relevant tower/Barracks is destroyed regarding standard Tier 1 or 2 spawning?
+
+
+## Clarifications — creator confirmed
+- **Tier 3 siege machines spawn from the Castle**, not the Barracks. Destruction of the opposing Barracks enables them; exact wave frequency/quantity still TBD.
+- Each team has five roles assigned **before** the match: **Top, Mid, Bot, Support, Jungle**.
+- **Any Conqueror may be selected for any role**; roles aren't hard-locked by character.
+- The **Top laner's Kingdom determines Top Lane towers and minion faction; Mid laner's Kingdom determines Mid; Bot laner's Kingdom determines Bot**.
+- **Support and Jungle Conquerors DO NOT influence tower/Kingdom choice**.
+- Kingdom affiliation belongs to the Conqueror, not to the position permanently: the same Conqueror can influence a different lane's towers when assigned that role in another match.
+- Previously unresolved question of how three Kingdoms are selected is now **RESOLVED**.
