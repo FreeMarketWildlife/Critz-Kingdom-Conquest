@@ -1,0 +1,14 @@
+{
+  "glb_actions": [
+    "Rodin_Challenge",
+    "Rodin_GroundSlam",
+    "Rodin_HeavyPunch",
+    "Rodin_HitReact",
+    "Rodin_Idle",
+    "Rodin_Walk"
+  ],
+  "embedded_images": 3,
+  "skins": 1,
+  "fbx_roundtrip_before_texture": "One armature, 26 bones including root, one mesh and all six clips imported successfully.",
+  "unreal_import": "Not performed"
+}

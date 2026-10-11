@@ -1,0 +1,46 @@
+{
+  "vertices_before_weld": 9608,
+  "vertices": 8248,
+  "triangles": 16510,
+  "deform_bones": 25,
+  "control_bones": 8,
+  "weight_errors": 0,
+  "actions": {
+    "Rodin_Idle": {
+      "frames": 49,
+      "nonfinite_vertices": 0,
+      "max_edge_stretch_ratio": 1.125,
+      "lowest_point_m": 0.0
+    },
+    "Rodin_Walk": {
+      "frames": 33,
+      "nonfinite_vertices": 0,
+      "max_edge_stretch_ratio": 3.392,
+      "lowest_point_m": -0.0
+    },
+    "Rodin_HeavyPunch": {
+      "frames": 25,
+      "nonfinite_vertices": 0,
+      "max_edge_stretch_ratio": 7.558,
+      "lowest_point_m": 0.0
+    },
+    "Rodin_GroundSlam": {
+      "frames": 37,
+      "nonfinite_vertices": 0,
+      "max_edge_stretch_ratio": 11.368,
+      "lowest_point_m": 0.0
+    },
+    "Rodin_Challenge": {
+      "frames": 49,
+      "nonfinite_vertices": 0,
+      "max_edge_stretch_ratio": 6.256,
+      "lowest_point_m": 0.0
+    },
+    "Rodin_HitReact": {
+      "frames": 19,
+      "nonfinite_vertices": 0,
+      "max_edge_stretch_ratio": 1.761,
+      "lowest_point_m": 0.0
+    }
+  }
+}

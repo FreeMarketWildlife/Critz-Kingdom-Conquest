@@ -1,0 +1,6 @@
+{
+  "weighted_meshes": 77,
+  "weight_checks": "passed",
+  "finite_deformation_checks": "passed",
+  "export": "gorilla_conqueror_v01.glb"
+}

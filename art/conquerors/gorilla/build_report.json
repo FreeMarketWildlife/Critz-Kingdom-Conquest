@@ -1,0 +1,31 @@
+{
+  "blender": "5.2.2 LTS",
+  "mesh_objects": 77,
+  "triangles": 10614,
+  "bones": 22,
+  "actions": [
+    "Gorilla_Idle",
+    "Gorilla_KnuckleWalk",
+    "Gorilla_HeavyPunch",
+    "Gorilla_Challenge"
+  ],
+  "plugins": {
+    "installed_enabled": [
+      "io_anim_bvh",
+      "io_curve_svg",
+      "io_mesh_uv_layout",
+      "io_scene_fbx",
+      "io_scene_gltf2",
+      "cycles",
+      "pose_library",
+      "bl_pkg",
+      "bl_ext.user_default.game_rig_tools_unreal_module",
+      "bl_ext.user_default.game_rig_tools",
+      "bl_ext.user_default.voxel_skinning",
+      "send2ue",
+      "a_Rodin",
+      "Roblox Starter Rigs"
+    ],
+    "Game Rig Tools": "Four original actions registered in Action Bakery; frame ranges set with its operator."
+  }
+}

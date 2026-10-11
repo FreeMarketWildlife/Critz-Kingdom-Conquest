@@ -1,0 +1,35 @@
+{
+  "retarget_root": "pelvis",
+  "chains": {
+    "Spine": {
+      "start_bone": "spine_01",
+      "end_bone": "spine_03"
+    },
+    "Head": {
+      "start_bone": "neck_01",
+      "end_bone": "head"
+    },
+    "LeftArm": {
+      "start_bone": "upperarm_l",
+      "end_bone": "hand_l"
+    },
+    "RightArm": {
+      "start_bone": "upperarm_r",
+      "end_bone": "hand_r"
+    },
+    "LeftLeg": {
+      "start_bone": "thigh_l",
+      "end_bone": "ball_l"
+    },
+    "RightLeg": {
+      "start_bone": "thigh_r",
+      "end_bone": "ball_r"
+    }
+  },
+  "notes": [
+    "Reference only; this JSON is not a directly importable Unreal asset.",
+    "Create an IK Rig for this skeletal mesh and an IK Retargeter to the source animation skeleton.",
+    "Adjust the retarget poses to match arm angles; preserve gorilla limb proportions.",
+    "Use source root motion settings intentionally; clips are motion studies, not validated in Unreal."
+  ]
+}

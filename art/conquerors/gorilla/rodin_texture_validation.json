@@ -1,0 +1,21 @@
+{
+  "matched_uv_faces": 16510,
+  "total_faces": 16510,
+  "packed_images": [
+    {
+      "name": "texture_diffuse",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "texture_metallic-texture_roughness",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "texture_normal",
+      "width": 2048,
+      "height": 2048
+    }
+  ]
+}
