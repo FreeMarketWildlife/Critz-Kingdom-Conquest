@@ -1,9 +1,14 @@
 // Deterministic CPU benchmark; DOM/canvas are stubbed, so this is not GPU/frame timing.
 const path = require('node:path');
 const { performance } = require('node:perf_hooks');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const crypto = require('node:crypto');
 const { createHarness } = require('./test-support/harness.cjs');
 const root = process.argv[2] ? path.resolve(process.argv[2]) : __dirname;
 const samples = Number(process.env.KINGDOM_BENCH_SAMPLES || 3);
+assert.ok(Number.isInteger(samples) && samples > 0);
+const digest = value => crypto.createHash('sha256').update(value).digest('hex');
 const scenarios = {
   simulation: `selected=null; for(let i=0;i<5000;i++) update(.02);`,
   navigation: `const start={x:470,y:1670},end={x:780,y:1670}; for(let i=0;i<500;i++) route(start,end);`,
@@ -16,6 +21,7 @@ const scenarios = {
 const results = {};
 for (const [name, source] of Object.entries(scenarios)) {
   const elapsed = [];
+  const stateHashes = [];
   let state;
   for (let sample = 0; sample < samples; sample++) {
     const harness = createHarness({ root });
@@ -25,11 +31,13 @@ for (const [name, source] of Object.entries(scenarios)) {
     state = JSON.parse(harness.run(`JSON.stringify({clock,waveNumber,winner,kills,
       units:units.map(u=>[u.id,u.kind,u.hp,u.x,u.y,u.bells,u.cs]),
       projectiles:projectiles.length,skillshots:skillshots.length})`));
+    stateHashes.push(digest(JSON.stringify(state)));
   }
+  assert.equal(new Set(stateHashes).size, 1, `${name} is deterministic across samples`);
   const ordered = [...elapsed].sort((a, b) => a - b);
   results[name] = { samplesMs: elapsed, medianMs: ordered[Math.floor(ordered.length / 2)],
     units: state.units.length, simulatedSeconds: state.clock,
-    stateSha256: require('node:crypto').createHash('sha256').update(JSON.stringify(state)).digest('hex') };
+    workloadSha256: digest(source), stateSha256: stateHashes[0], sampleStateHashes: stateHashes };
 }
 const harness = createHarness({ root });
 harness.run('draw();');
@@ -37,5 +45,6 @@ const first = { ...harness.drawingCalls };
 harness.run('draw();');
 results.render = { warmCanvasCalls: Object.fromEntries(Object.entries(harness.drawingCalls)
   .map(([name, count]) => [name, count - (first[name] || 0)])) };
-console.log(JSON.stringify({ node: process.version, platform: `${process.platform}/${process.arch}`,
+console.log(JSON.stringify({ node: process.version, platform: `${process.platform}/${process.arch}`, seed: 314159,
+  sourceSha256: Object.fromEntries(['game.js','play.js'].map(name => [name, digest(fs.readFileSync(path.join(root,name)))])),
   samples, maxRssMiB: Number((process.resourceUsage().maxRSS / 1024).toFixed(2)), results }, null, 2));

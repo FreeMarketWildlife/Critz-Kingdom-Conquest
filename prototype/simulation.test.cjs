@@ -1,12 +1,6 @@
-const fs=require('node:fs');
 const vm=require('node:vm');
 const assert=require('node:assert/strict');
-const drawing=new Proxy({}, {get:(_,k)=>()=>{},set:()=>true});
-const element=()=>({innerHTML:'',textContent:'',children:[],clientWidth:1200,clientHeight:760,width:180,height:140,classList:{remove(){},toggle(){}},addEventListener(){},getContext(){return drawing},prepend(){},appendChild(){},querySelectorAll(){return[]},getBoundingClientRect(){return{left:0,top:0,width:1200,height:760}}});
-const elements=new Map();
-const context=vm.createContext({console,Math,Float32Array,Int32Array,Uint8Array,Map,document:{body:element(),getElementById(id){if(!elements.has(id))elements.set(id,element());return elements.get(id)},querySelectorAll(){return[]},querySelector(){return null},createElement:element},window:{addEventListener(){},devicePixelRatio:1},requestAnimationFrame(){}});
-vm.runInContext(fs.readFileSync(__dirname+'/game.js','utf8'),context);
-vm.runInContext(fs.readFileSync(__dirname+'/play.js','utf8'),context);
+const {context}=require('./test-support/harness.cjs').createHarness();
 const result=vm.runInContext(`(() => {
  let checks=0;const check=(condition,label)=>{checks++;if(!condition)throw Error(label)};
  check(selected.kit===1&&camera.zoom>=1,'starts playing with close camera');

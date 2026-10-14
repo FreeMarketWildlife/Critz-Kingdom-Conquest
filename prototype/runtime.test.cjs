@@ -51,6 +51,51 @@ test('Flash cancels a recall and attack windup when it moves the Conqueror', () 
   assert.equal(h.run('selected.recall===0&&selected.pending===null&&flashCd===25'), true);
 });
 
+test('recall does not preserve a dash to execute after returning to the fountain', () => {
+  const h = createHarness();
+  h.run('units=[selected];nextWave=Infinity;selected.dash={x:1,y:0,left:100};');
+  h.event('keydown', { code: 'KeyB' });
+  h.run('for(let i=0;i<201;i++)update(.02);');
+  assert.equal(h.run('selected.dash===null&&selected.x===bases[0].x+90&&selected.y===bases[0].y-90'), true);
+});
+
+test('repeated enemy orders preserve attack windup; stop cancels it', () => {
+  const h = createHarness();
+  assert.equal(h.run(`(() => {
+    const enemy=add({x:selected.x+80,y:selected.y,team:1,kind:'minion',hp:200,radius:13});
+    command(enemy,enemy);attack(selected,enemy);const pending=selected.pending;
+    command(enemy,enemy);return selected.pending===pending;
+  })()`), true);
+  h.event('keydown', { code: 'KeyS' });
+  assert.equal(h.run('selected.pending===null&&selected.order===null'), true);
+});
+
+test('held/repeated spell input cannot duplicate a cast', () => {
+  const h = createHarness();
+  h.event('keydown', { code: 'KeyQ' });
+  h.event('keydown', { code: 'KeyQ', repeat: true });
+  h.event('keydown', { code: 'KeyQ' });
+  assert.equal(h.run('selected.mana===415&&skillshots.length===1'), true);
+});
+
+test('hidden callbacks suspend simulation and rendering; resume excludes hidden time', () => {
+  const h = createHarness();
+  h.run('frame(1000);keys.add("ArrowLeft");attackMove=true;document.hidden=true;');
+  h.event('document:visibilitychange');
+  const before = h.run('clock');
+  const calls = { ...h.drawingCalls };
+  h.run('frame(60000);');
+  assert.equal(h.run('clock'), before);
+  assert.deepEqual(h.drawingCalls, calls);
+  assert.equal(h.run('keys.size===0&&!attackMove'), true);
+  h.run('document.hidden=false;');
+  h.event('document:visibilitychange');
+  h.run('frame(120000);');
+  assert.equal(h.run('clock'), before);
+  h.run('frame(120020);');
+  assert.ok(Math.abs(h.run('clock') - before - .02) < 1e-12);
+});
+
 test('restart clears references and input state from the previous battle', () => {
   const h = createHarness();
   h.run('hover=selected;attackMove=true;shake=3;keys.add("ArrowLeft");init();');
