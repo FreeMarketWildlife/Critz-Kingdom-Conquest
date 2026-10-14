@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "units": 80,
+      "updates": 100,
+      "candidateVisits": 640000,
+      "timesMs": [
+        271.707292,
+        270.27087500000005,
+        263.46074999999996
+      ],
+      "medianMs": 270.27087500000005
+    },
+    {
+      "units": 160,
+      "updates": 100,
+      "candidateVisits": 2560000,
+      "timesMs": [
+        1028.8793329999999,
+        1005.9620830000001,
+        1000.820291
+      ],
+      "medianMs": 1005.9620830000001
+    },
+    {
+      "units": 320,
+      "updates": 100,
+      "candidateVisits": 10240000,
+      "timesMs": [
+        3822.8316250000003,
+        3848.0497080000005,
+        3846.4772090000006
+      ],
+      "medianMs": 3846.4772090000006
+    },
+    {
+      "units": 640,
+      "updates": 100,
+      "candidateVisits": 40960000,
+      "timesMs": [
+        14977.391708000001,
+        15439.717250000002,
+        15216.6135
+      ],
+      "medianMs": 15216.6135
+    }
+  ],
+  "note": "Instrumented target-candidate count proves quadratic scanning. Timings include the counter and Node VM overhead; use this for scaling assessment, not browser FPS."
+}

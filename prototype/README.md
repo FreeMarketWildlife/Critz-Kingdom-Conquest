@@ -19,6 +19,7 @@ You start as Vesper in mid lane, at gameplay zoom. Nine other Conquerors use bot
 - **F:** Flash toward the cursor (25-second prototype cooldown).
 - **B:** channel a four-second recall. Moving or taking damage cancels it. Your fountain heals and restores mana.
 - **Shop button:** buy damage, health or speed upgrades at your base with bells.
+- Hidden tabs suspend simulation and rendering; returning resumes without advancing the battle by the hidden time.
 - **Conquerors button:** switch to one of five original animal characters. Spectator mode is optional; playing is the default.
 - **Minimap:** left click to look; right click to command movement across the map.
 
@@ -45,6 +46,7 @@ With Node.js installed:
 ```sh
 node prototype/simulation.test.cjs
 node --test prototype/runtime.test.cjs
+node prototype/check.cjs
 ```
 
 The simulation harness checks close-camera startup, movement, collision routing, terrain-blocked dash, attack windup and projectile last hits, skillshot/cooldown/mana behavior, structure protection, boss buffs, death/respawn, sustained simulation, render caching, victory, and restart. Browser QA covers the visible layout and controls.
@@ -54,15 +56,19 @@ The runtime regressions cover death/level-up interactions, recall cancellation, 
 ```sh
 node prototype/benchmark.cjs
 node --expose-gc prototype/soak.cjs
+node prototype/verify-performance.cjs
 ```
 
 Optional browser checks require Playwright and Chrome. They create a temporary browser profile, bind an ephemeral port on `127.0.0.1`, and verify the offline font fallback:
 
 ```sh
 node prototype/browser.test.cjs
+node prototype/check.cjs --browser
 ```
 
 Set `KINGDOM_PLAYWRIGHT_MODULE` to an installed Playwright module path if it is outside this repository, or `KINGDOM_BROWSER_EXECUTABLE` to another Chromium executable. An optional first argument points to a baseline prototype directory for pixel comparisons. `KINGDOM_QA_OUTPUT` enables screenshots. Measurements and the optimization handoff are in [the runtime report](../technical/2026-10-14-runtime/REPORT.md). This static prototype has no compilation or bundling step.
+
+Browser coverage includes narrow/tablet/landscape control bounds, touch ability/shop buttons, repeated and interrupted inputs, visibility suspension, native Chrome freeze/resume, and WebAudio cleanup. Touch checks cover existing buttons; movement still uses the documented mouse/keyboard controls. `verify-performance.cjs` reconstructs only the performance changes from pinned commit `7c189fb` and verifies equal fixed-seed workloads and resulting state hashes. `targeting-scale.cjs` isolates the current all-unit target-scan scaling for further profiling.
 
 ## Design reference
 

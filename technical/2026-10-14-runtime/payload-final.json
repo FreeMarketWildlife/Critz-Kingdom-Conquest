@@ -1,0 +1,11 @@
+{
+  "before": {
+    "rawBytes": 57684,
+    "gzipBytes": 21199
+  },
+  "after": {
+    "rawBytes": 60160,
+    "gzipBytes": 22041
+  },
+  "note": "Calculated gzip only; static app has no compiler/bundler."
+}

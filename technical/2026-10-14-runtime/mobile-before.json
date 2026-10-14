@@ -1,0 +1,422 @@
+[
+  {
+    "width": 320,
+    "height": 640,
+    "controls": [
+      {
+        "id": "choose",
+        "rect": {
+          "left": 127.875,
+          "top": 8.5,
+          "right": 196.140625,
+          "bottom": 48.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "pause",
+        "rect": {
+          "left": 203.140625,
+          "top": 8.5,
+          "right": 247.5,
+          "bottom": 48.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "speed",
+        "rect": {
+          "left": 254.5,
+          "top": 8.5,
+          "right": 297.75,
+          "bottom": 48.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "reset",
+        "rect": {
+          "left": 304.75,
+          "top": 8.5,
+          "right": 345.203125,
+          "bottom": 48.5
+        },
+        "inside": false,
+        "hit": false
+      },
+      {
+        "id": "shop",
+        "rect": {
+          "left": 12,
+          "top": 599,
+          "right": 159.671875,
+          "bottom": 632
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "0",
+        "rect": {
+          "left": 96,
+          "top": 547,
+          "right": 156,
+          "bottom": 623
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "1",
+        "rect": {
+          "left": 164,
+          "top": 547,
+          "right": 224,
+          "bottom": 623
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "2",
+        "rect": {
+          "left": 232,
+          "top": 547,
+          "right": 292,
+          "bottom": 623
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "3",
+        "rect": {
+          "left": 300,
+          "top": 547,
+          "right": 360,
+          "bottom": 623
+        },
+        "inside": false,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "controls": [
+      {
+        "id": "choose",
+        "rect": {
+          "left": 127.875,
+          "top": 8.5,
+          "right": 196.140625,
+          "bottom": 48.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "pause",
+        "rect": {
+          "left": 203.140625,
+          "top": 8.5,
+          "right": 247.5,
+          "bottom": 48.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "speed",
+        "rect": {
+          "left": 254.5,
+          "top": 8.5,
+          "right": 306.25,
+          "bottom": 48.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "reset",
+        "rect": {
+          "left": 313.25,
+          "top": 8.5,
+          "right": 370,
+          "bottom": 48.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "shop",
+        "rect": {
+          "left": 12,
+          "top": 803,
+          "right": 159.671875,
+          "bottom": 836
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "0",
+        "rect": {
+          "left": 96,
+          "top": 751,
+          "right": 156,
+          "bottom": 827
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "1",
+        "rect": {
+          "left": 164,
+          "top": 751,
+          "right": 224,
+          "bottom": 827
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "2",
+        "rect": {
+          "left": 232,
+          "top": 751,
+          "right": 292,
+          "bottom": 827
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "3",
+        "rect": {
+          "left": 300,
+          "top": 751,
+          "right": 360,
+          "bottom": 827
+        },
+        "inside": true,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "controls": [
+      {
+        "id": "choose",
+        "rect": {
+          "left": 352.140625,
+          "top": 9.5,
+          "right": 461.75,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "pause",
+        "rect": {
+          "left": 468.75,
+          "top": 9.5,
+          "right": 540.125,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "speed",
+        "rect": {
+          "left": 547.125,
+          "top": 9.5,
+          "right": 639.40625,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "reset",
+        "rect": {
+          "left": 646.40625,
+          "top": 9.5,
+          "right": 748,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "shop",
+        "rect": {
+          "left": 12,
+          "top": 983,
+          "right": 159.671875,
+          "bottom": 1016
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "0",
+        "rect": {
+          "left": 284,
+          "top": 931,
+          "right": 344,
+          "bottom": 1007
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "1",
+        "rect": {
+          "left": 352,
+          "top": 931,
+          "right": 412,
+          "bottom": 1007
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "2",
+        "rect": {
+          "left": 420,
+          "top": 931,
+          "right": 480,
+          "bottom": 1007
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "3",
+        "rect": {
+          "left": 488,
+          "top": 931,
+          "right": 548,
+          "bottom": 1007
+        },
+        "inside": true,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "controls": [
+      {
+        "id": "choose",
+        "rect": {
+          "left": 428.140625,
+          "top": 9.5,
+          "right": 537.75,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "pause",
+        "rect": {
+          "left": 544.75,
+          "top": 9.5,
+          "right": 616.125,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "speed",
+        "rect": {
+          "left": 623.125,
+          "top": 9.5,
+          "right": 715.40625,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "reset",
+        "rect": {
+          "left": 722.40625,
+          "top": 9.5,
+          "right": 824,
+          "bottom": 47.5
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "shop",
+        "rect": {
+          "left": 12,
+          "top": 349,
+          "right": 159.671875,
+          "bottom": 382
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "0",
+        "rect": {
+          "left": 284,
+          "top": 297,
+          "right": 344,
+          "bottom": 373
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "1",
+        "rect": {
+          "left": 352,
+          "top": 297,
+          "right": 412,
+          "bottom": 373
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "2",
+        "rect": {
+          "left": 420,
+          "top": 297,
+          "right": 480,
+          "bottom": 373
+        },
+        "inside": true,
+        "hit": true
+      },
+      {
+        "id": "3",
+        "rect": {
+          "left": 488,
+          "top": 297,
+          "right": 548,
+          "bottom": 373
+        },
+        "inside": true,
+        "hit": true
+      }
+    ]
+  }
+]

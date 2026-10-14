@@ -1,0 +1,15 @@
+{
+  "existingUserFilesVerifiedUnchanged": 229,
+  "worktree": "/Users/tanoshi/Documents/ChatGPT/Critz-Kingdom Conquest/.worktrees/kingdom-runtime-optimization",
+  "durableReportCopy": "/Users/tanoshi/Documents/ChatGPT/Critz-Kingdom Conquest/.reports/kingdom-runtime-2026-10-14/REPORT.md",
+  "branch": "codex/kingdom-runtime-optimization",
+  "codeCommits": [
+    "820500b",
+    "f37691c"
+  ],
+  "originalBranch": "codex/gorilla-pc-handoff",
+  "originalHead": "7c189fb",
+  "pushOrDeploymentPerformed": false,
+  "resources": "Temporary browser profiles and ephemeral loopback servers closed; existing servers untouched.",
+  "localExclusion": "Only /.worktrees/kingdom-runtime-optimization/ appended to .git/info/exclude, keeping the nested checkout out of accidental staging."
+}

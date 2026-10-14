@@ -1,0 +1,134 @@
+{
+  "totalSampledMs": 4399.29,
+  "selfSamples": [
+    {
+      "function": "update",
+      "file": "play.js",
+      "line": 64,
+      "selfMs": 753.21,
+      "selfPercent": 17.12,
+      "inclusiveMs": 1288.55
+    },
+    {
+      "function": "",
+      "file": "evalmachine.<anonymous>",
+      "line": 1,
+      "selfMs": 742.49,
+      "selfPercent": 16.88,
+      "inclusiveMs": 2031.04
+    },
+    {
+      "function": "update",
+      "file": "play.js",
+      "line": 64,
+      "selfMs": 705.72,
+      "selfPercent": 16.04,
+      "inclusiveMs": 1885.46
+    },
+    {
+      "function": "dist",
+      "file": "game.js",
+      "line": 15,
+      "selfMs": 416.96,
+      "selfPercent": 9.48,
+      "inclusiveMs": 416.96
+    },
+    {
+      "function": "lineClear",
+      "file": "play.js",
+      "line": 21,
+      "selfMs": 382.88,
+      "selfPercent": 8.7,
+      "inclusiveMs": 390.54
+    },
+    {
+      "function": "route",
+      "file": "play.js",
+      "line": 24,
+      "selfMs": 283.04,
+      "selfPercent": 6.43,
+      "inclusiveMs": 849.08
+    },
+    {
+      "function": "",
+      "file": "evalmachine.<anonymous>",
+      "line": 1,
+      "selfMs": 281.62,
+      "selfPercent": 6.4,
+      "inclusiveMs": 2167.08
+    },
+    {
+      "function": "separate",
+      "file": "play.js",
+      "line": 63,
+      "selfMs": 147.34,
+      "selfPercent": 3.35,
+      "inclusiveMs": 153.75
+    },
+    {
+      "function": "heuristic",
+      "file": "play.js",
+      "line": 25,
+      "selfMs": 114.41,
+      "selfPercent": 2.6,
+      "inclusiveMs": 114.41
+    },
+    {
+      "function": "separate",
+      "file": "play.js",
+      "line": 63,
+      "selfMs": 107.58,
+      "selfPercent": 2.45,
+      "inclusiveMs": 112.83
+    },
+    {
+      "function": "(program)",
+      "file": "",
+      "line": 0,
+      "selfMs": 75.42,
+      "selfPercent": 1.71,
+      "inclusiveMs": 75.42
+    },
+    {
+      "function": "move",
+      "file": "play.js",
+      "line": 48,
+      "selfMs": 61.75,
+      "selfPercent": 1.4,
+      "inclusiveMs": 927.99
+    },
+    {
+      "function": "(garbage collector)",
+      "file": "",
+      "line": 0,
+      "selfMs": 51.62,
+      "selfPercent": 1.17,
+      "inclusiveMs": 51.62
+    },
+    {
+      "function": "nearestProgress",
+      "file": "play.js",
+      "line": 33,
+      "selfMs": 35.54,
+      "selfPercent": 0.81,
+      "inclusiveMs": 55.08
+    },
+    {
+      "function": "dist",
+      "file": "game.js",
+      "line": 15,
+      "selfMs": 30.54,
+      "selfPercent": 0.69,
+      "inclusiveMs": 30.54
+    },
+    {
+      "function": "dist",
+      "file": "game.js",
+      "line": 15,
+      "selfMs": 21.54,
+      "selfPercent": 0.49,
+      "inclusiveMs": 21.54
+    }
+  ],
+  "note": "Combined final-code Node VM simulation/navigation/dense-targeting workloads, one sample each. Profiling overhead means profile-run timings are not comparable to normal benchmark timings."
+}

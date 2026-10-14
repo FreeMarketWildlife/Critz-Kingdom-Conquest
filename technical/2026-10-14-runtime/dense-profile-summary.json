@@ -1,0 +1,91 @@
+{
+  "sampledMs": 4026.625,
+  "selfSamples": [
+    {
+      "function": "update",
+      "file": "play.js",
+      "line": 64,
+      "selfMs": 1435.254,
+      "selfPercent": 35.64409399931704
+    },
+    {
+      "function": "",
+      "file": "evalmachine.<anonymous>",
+      "line": 1,
+      "selfMs": 1318.067,
+      "selfPercent": 32.733790705615746
+    },
+    {
+      "function": "dist",
+      "file": "game.js",
+      "line": 15,
+      "selfMs": 901.549,
+      "selfPercent": 22.38969360196194
+    },
+    {
+      "function": "separate",
+      "file": "play.js",
+      "line": 63,
+      "selfMs": 215.625,
+      "selfPercent": 5.354980908328936
+    },
+    {
+      "function": "(garbage collector)",
+      "file": "",
+      "line": 0,
+      "selfMs": 77.21,
+      "selfPercent": 1.9174867289603577
+    },
+    {
+      "function": "(program)",
+      "file": "",
+      "line": 0,
+      "selfMs": 45.502,
+      "selfPercent": 1.130028249464502
+    },
+    {
+      "function": "rand",
+      "file": "game.js",
+      "line": 15,
+      "selfMs": 6.041,
+      "selfPercent": 0.15002638686244685
+    },
+    {
+      "function": "burst",
+      "file": "play.js",
+      "line": 17,
+      "selfMs": 6.0,
+      "selfPercent": 0.14900816440567471
+    },
+    {
+      "function": "blocked",
+      "file": "play.js",
+      "line": 20,
+      "selfMs": 4.334,
+      "selfPercent": 0.10763356408903238
+    },
+    {
+      "function": "move",
+      "file": "play.js",
+      "line": 48,
+      "selfMs": 2.292,
+      "selfPercent": 0.05692111880296775
+    },
+    {
+      "function": "",
+      "file": "node:internal/readline/utils",
+      "line": 1,
+      "selfMs": 1.625,
+      "selfPercent": 0.040356377859870236
+    },
+    {
+      "function": "math.random",
+      "file": "file:///Users/tanoshi/Documents/ChatGPT/Critz-Kingdom%20Conquest/.worktrees/kingdom-runtime-optimization/prototype/test-support/harness.cjs",
+      "line": 21,
+      "selfMs": 1.542,
+      "selfPercent": 0.03829509825225841
+    }
+  ],
+  "workload": "400 extra minions on a 600x600-world-unit lattice; 500 simulation updates at .02 seconds; Node VM DOM/canvas stubs",
+  "note": "Profile overhead; sampled CPU work, not browser frame time. update includes target scanning plus timers and state updates."
+}

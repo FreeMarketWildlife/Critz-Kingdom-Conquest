@@ -1,0 +1,198 @@
+{
+  "baseCommit": "7c189fb",
+  "before": {
+    "node": "v24.21.0",
+    "platform": "darwin/arm64",
+    "seed": 314159,
+    "sourceSha256": {
+      "game.js": "e83575ee552ea00bc3379df64959860780049262b12487533e4bba2ef96e607d",
+      "play.js": "4103989e73097bd580d4be832c7033563216867dc52d3f6fd67d96459e39537a"
+    },
+    "samples": 3,
+    "maxRssMiB": 257.25,
+    "results": {
+      "simulation": {
+        "samplesMs": [
+          24228.528,
+          24176.981,
+          24151.414
+        ],
+        "medianMs": 24176.981,
+        "units": 79,
+        "simulatedSeconds": 99.99999999999724,
+        "workloadSha256": "29263518f46d950ecd14fe469a185857da514beeeeb752b9a8a442e8cb932ae9",
+        "stateSha256": "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d",
+        "sampleStateHashes": [
+          "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d",
+          "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d",
+          "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d"
+        ]
+      },
+      "navigation": {
+        "samplesMs": [
+          179.14,
+          180.633,
+          180.942
+        ],
+        "medianMs": 180.633,
+        "units": 46,
+        "simulatedSeconds": 0,
+        "workloadSha256": "db567ced28cc50de9681aee51fd022d7cc1f5dbcb1a120b42e217e47dd36f69c",
+        "stateSha256": "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+        "sampleStateHashes": [
+          "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+          "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+          "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736"
+        ]
+      },
+      "targeting": {
+        "samplesMs": [
+          2780.276,
+          2854.258,
+          2890.14
+        ],
+        "medianMs": 2854.258,
+        "units": 480,
+        "simulatedSeconds": 4.999999999999981,
+        "workloadSha256": "de842903e1268cd546541a057d04d06f6a56116d9ff40c18dd3fc150f1d4f6d9",
+        "stateSha256": "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+        "sampleStateHashes": [
+          "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+          "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+          "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53"
+        ]
+      },
+      "render": {
+        "warmCanvasCalls": {
+          "setTransform": 1,
+          "clearRect": 1,
+          "fillRect": 278,
+          "translate": 22,
+          "scale": 1,
+          "beginPath": 779,
+          "ellipse": 429,
+          "fill": 694,
+          "moveTo": 236,
+          "lineTo": 522,
+          "stroke": 135,
+          "save": 20,
+          "rotate": 10,
+          "restore": 20,
+          "fillText": 22,
+          "closePath": 152,
+          "arc": 114,
+          "drawImage": 1,
+          "strokeRect": 1
+        }
+      }
+    }
+  },
+  "after": {
+    "node": "v24.21.0",
+    "platform": "darwin/arm64",
+    "seed": 314159,
+    "sourceSha256": {
+      "game.js": "e83575ee552ea00bc3379df64959860780049262b12487533e4bba2ef96e607d",
+      "play.js": "0bff282728df2a90291361b2fc3ad0ee37f8a43f230a06edc15da22784d14768"
+    },
+    "samples": 3,
+    "maxRssMiB": 184.06,
+    "results": {
+      "simulation": {
+        "samplesMs": [
+          3510.613,
+          3401.309,
+          3405.072
+        ],
+        "medianMs": 3405.072,
+        "units": 79,
+        "simulatedSeconds": 99.99999999999724,
+        "workloadSha256": "29263518f46d950ecd14fe469a185857da514beeeeb752b9a8a442e8cb932ae9",
+        "stateSha256": "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d",
+        "sampleStateHashes": [
+          "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d",
+          "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d",
+          "8b73618e3ce6b7ab5f12dcc8307024956695eca7a201af13ff8dbf089755591d"
+        ]
+      },
+      "navigation": {
+        "samplesMs": [
+          23.978,
+          23.732,
+          24.447
+        ],
+        "medianMs": 23.978,
+        "units": 46,
+        "simulatedSeconds": 0,
+        "workloadSha256": "db567ced28cc50de9681aee51fd022d7cc1f5dbcb1a120b42e217e47dd36f69c",
+        "stateSha256": "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+        "sampleStateHashes": [
+          "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+          "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+          "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736"
+        ]
+      },
+      "targeting": {
+        "samplesMs": [
+          2048.491,
+          1943.367,
+          1947.819
+        ],
+        "medianMs": 1947.819,
+        "units": 480,
+        "simulatedSeconds": 4.999999999999981,
+        "workloadSha256": "de842903e1268cd546541a057d04d06f6a56116d9ff40c18dd3fc150f1d4f6d9",
+        "stateSha256": "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+        "sampleStateHashes": [
+          "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+          "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+          "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53"
+        ]
+      },
+      "render": {
+        "warmCanvasCalls": {
+          "setTransform": 1,
+          "clearRect": 1,
+          "fillRect": 278,
+          "translate": 22,
+          "scale": 1,
+          "beginPath": 779,
+          "ellipse": 429,
+          "fill": 694,
+          "moveTo": 236,
+          "lineTo": 522,
+          "stroke": 135,
+          "save": 20,
+          "rotate": 10,
+          "restore": 20,
+          "fillText": 22,
+          "closePath": 152,
+          "arc": 114,
+          "drawImage": 1,
+          "strokeRect": 1
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "simulation": {
+      "beforeMs": 24176.981,
+      "afterMs": 3405.072,
+      "speedup": 7.100284810423979,
+      "equivalentWorkloadAndState": true
+    },
+    "navigation": {
+      "beforeMs": 180.633,
+      "afterMs": 23.978,
+      "speedup": 7.533280507131537,
+      "equivalentWorkloadAndState": true
+    },
+    "targeting": {
+      "beforeMs": 2854.258,
+      "afterMs": 1947.819,
+      "speedup": 1.465361001201857,
+      "equivalentWorkloadAndState": true
+    }
+  },
+  "note": "Performance-only code is reconstructed by the explicit transformations in verify-performance.cjs; death/input/render fixes are excluded. State hashes cover the fields listed in benchmark.cjs."
+}

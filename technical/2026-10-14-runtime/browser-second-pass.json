@@ -1,0 +1,368 @@
+{
+  "browser": "155.0.8059.40",
+  "visual": {
+    "before": [
+      "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+      "6a33d9621a150283498da36b0435871603b93aa9e9f827893b4f6ad86366c97e",
+      "14fe9c36d349f83916f40b591244d7e0559e6e1385df488ced40523b29c1a214",
+      "aa2b4b4b94fb15d81aa76b5acbd82faac2f52b6931f50711471a8035ba9fcec4",
+      "a1316c3951a62759566723c92348739e6a9042ba6feb66d66d719bcaa22b90b3"
+    ],
+    "after": [
+      "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+      "6a33d9621a150283498da36b0435871603b93aa9e9f827893b4f6ad86366c97e",
+      "14fe9c36d349f83916f40b591244d7e0559e6e1385df488ced40523b29c1a214",
+      "aa2b4b4b94fb15d81aa76b5acbd82faac2f52b6931f50711471a8035ba9fcec4",
+      "a1316c3951a62759566723c92348739e6a9042ba6feb66d66d719bcaa22b90b3"
+    ]
+  },
+  "performance": {
+    "before": {
+      "simulationMs": [
+        429.69999980926514,
+        404.69999980926514,
+        398.30000019073486
+      ],
+      "drawMs": [
+        54.69999980926514,
+        50.5,
+        50
+      ],
+      "simulationStartHashes": [
+        "22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7",
+        "22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7",
+        "22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7"
+      ],
+      "simulationEndHashes": [
+        "f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf",
+        "f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf",
+        "f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf"
+      ],
+      "drawStartHashes": [
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+        "e3b30807803a30b922c410ae163b9a05fd08af6b6fa47a9b33cf8a127cdc31c6",
+        "e3b30807803a30b922c410ae163b9a05fd08af6b6fa47a9b33cf8a127cdc31c6"
+      ],
+      "drawEndHashes": [
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30"
+      ],
+      "workload": {
+        "seed": 314159,
+        "simulationUpdates": 1000,
+        "simulationDt": 0.02,
+        "drawCalls": 200,
+        "viewport": [
+          1440,
+          900
+        ],
+        "devicePixelRatio": 1
+      },
+      "heldAbilityClickWorks": false
+    },
+    "after": {
+      "simulationMs": [
+        244.80000019073486,
+        195.30000019073486,
+        176.69999980926514
+      ],
+      "drawMs": [
+        26.59999990463257,
+        20.200000286102295,
+        20.100000381469727
+      ],
+      "simulationStartHashes": [
+        "22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7",
+        "22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7",
+        "22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7"
+      ],
+      "simulationEndHashes": [
+        "f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf",
+        "f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf",
+        "f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf"
+      ],
+      "drawStartHashes": [
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+        "e3b30807803a30b922c410ae163b9a05fd08af6b6fa47a9b33cf8a127cdc31c6",
+        "e3b30807803a30b922c410ae163b9a05fd08af6b6fa47a9b33cf8a127cdc31c6"
+      ],
+      "drawEndHashes": [
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+        "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30"
+      ],
+      "workload": {
+        "seed": 314159,
+        "simulationUpdates": 1000,
+        "simulationDt": 0.02,
+        "drawCalls": 200,
+        "viewport": [
+          1440,
+          900
+        ],
+        "devicePixelRatio": 1
+      },
+      "heldAbilityClickWorks": true
+    }
+  },
+  "checks": [
+    "five pixel-identical canvas views against baseline",
+    "benchmark workloads/start states and before/after drawing pixels match for every sample",
+    "ability click survives HUD refresh between pointer down/up",
+    "keyboard cast, mana cost, cooldown and button identity",
+    "resize reuses terrain canvas",
+    "right-click movement",
+    "shop armor cannot revive a dead Conqueror",
+    "spectating closes the shop",
+    "restart restores playable Vesper",
+    "repeated/held keyboard spell input costs mana once",
+    "repeated attack command preserves windup; stop interrupts it",
+    "hidden callbacks do not update/draw; resume drops elapsed hidden time",
+    "320/390 portrait, 768 tablet and 844x390 landscape controls/shop fit and respond",
+    "touch ability taps, repeated purchases, character switch and restart",
+    "ten real WebAudio tones disconnect twenty nodes; restart reuses the context",
+    "native Chrome freeze/resume with real animation frames remains finite",
+    "no browser runtime errors; local assets loaded with remote fonts blocked"
+  ],
+  "visibilityPolicy": {
+    "suspended": true,
+    "firstResume": true,
+    "secondAdvance": 0.02,
+    "method": "synthetic document.hidden + visibilitychange; deterministic 60-second gaps"
+  },
+  "mobile": [
+    {
+      "width": 320,
+      "height": 640,
+      "controls": [
+        {
+          "id": "choose",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "pause",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "speed",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "reset",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "shop",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "0",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "1",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "2",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "3",
+          "inside": true,
+          "hit": true
+        }
+      ],
+      "panel": {
+        "x": 20,
+        "y": 175,
+        "width": 290,
+        "height": 320
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "controls": [
+        {
+          "id": "choose",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "pause",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "speed",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "reset",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "shop",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "0",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "1",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "2",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "3",
+          "inside": true,
+          "hit": true
+        }
+      ],
+      "panel": {
+        "x": 20,
+        "y": 379,
+        "width": 290,
+        "height": 320
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "controls": [
+        {
+          "id": "choose",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "pause",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "speed",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "reset",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "shop",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "0",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "1",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "2",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "3",
+          "inside": true,
+          "hit": true
+        }
+      ],
+      "panel": {
+        "x": 20,
+        "y": 559,
+        "width": 290,
+        "height": 320
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "controls": [
+        {
+          "id": "choose",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "pause",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "speed",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "reset",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "shop",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "0",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "1",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "2",
+          "inside": true,
+          "hit": true
+        },
+        {
+          "id": "3",
+          "inside": true,
+          "hit": true
+        }
+      ],
+      "panel": {
+        "x": 20,
+        "y": 66,
+        "width": 290,
+        "height": 278
+      }
+    }
+  ],
+  "cleanup": {
+    "serverClosed": true,
+    "browserDisconnected": true
+  }
+}

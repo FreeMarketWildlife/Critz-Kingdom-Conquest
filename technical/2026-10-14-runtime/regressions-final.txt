@@ -1,0 +1,25 @@
+✔ experience cannot revive a dead nearby Conqueror (12.03825ms)
+✔ damage cancels recall for a Conqueror after selection changes (8.129541ms)
+✔ death clears transient movement and channel state (8.576792ms)
+✔ Flash cannot teleport a dead Conqueror or consume its cooldown (8.166917ms)
+✔ Flash cancels a recall and attack windup when it moves the Conqueror (8.146041ms)
+✔ recall does not preserve a dash to execute after returning to the fountain (9.445292ms)
+✔ repeated enemy orders preserve attack windup; stop cancels it (8.628416ms)
+✔ held/repeated spell input cannot duplicate a cast (8.586875ms)
+✔ hidden callbacks suspend simulation and rendering; resume excludes hidden time (24.197042ms)
+✔ restart clears references and input state from the previous battle (14.834958ms)
+✔ losing focus clears held movement and attack-move inputs (8.422917ms)
+✔ world terrain is reused when the viewport resizes (19.246583ms)
+✔ render culling retains tall structures near the visible edge (21.278792ms)
+✔ finished combat tones release their audio graph connections (8.683083ms)
+✔ collision checks match the original circle predicate, including boundaries (48.702958ms)
+✔ lane interpolation and progress agree along all lane segments (8.801666ms)
+✔ routes remain collision free across repeated searches and a structure opening (86.84975ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 356.362416

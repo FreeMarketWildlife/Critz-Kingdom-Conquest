@@ -1,0 +1,9 @@
+AssertionError [ERR_ASSERTION]: 844x390: shop panel fits within battlefield
+    at main (/Users/tanoshi/Documents/ChatGPT/Critz-Kingdom Conquest/.worktrees/kingdom-runtime-optimization/prototype/browser.test.cjs:189:14) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
