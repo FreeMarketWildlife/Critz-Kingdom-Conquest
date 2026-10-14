@@ -19,7 +19,8 @@ function createHarness({ root = process.env.KINGDOM_TEST_ROOT || path.resolve(__
   });
   const elements = new Map();
   const math = Object.create(Math);
-  math.random = () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 4294967296);
+  let randomCalls=0;
+  math.random = () => {randomCalls++;return ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 4294967296);};
   const window = {
     devicePixelRatio: 1,
     addEventListener(name, handler) {
@@ -49,6 +50,7 @@ function createHarness({ root = process.env.KINGDOM_TEST_ROOT || path.resolve(__
   }
   return {
     context, elements, drawingCalls,
+    randomState() { return { seed, randomCalls }; },
     run(source) { return vm.runInContext(source, context); },
     event(name, event = {}) {
       for (const handler of listeners.get(name) || []) handler({ preventDefault() {}, ...event });

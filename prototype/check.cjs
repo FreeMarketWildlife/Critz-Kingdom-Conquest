@@ -17,7 +17,8 @@ try {
   run(process.execPath, ['--check', 'prototype/test-support/harness.cjs']);
   run(process.execPath, ['prototype/simulation.test.cjs']);
   run(process.execPath, ['--test', 'prototype/runtime.test.cjs']);
-  run('git', ['diff', '--check']);
+  run(process.execPath, ['--test', 'prototype/targeting.test.cjs']);
+  run('git', ['diff', ...(process.env.KINGDOM_CHECK_BASE?[process.env.KINGDOM_CHECK_BASE+'..HEAD']:[]), '--check']);
   const browserIndex = process.argv.indexOf('--browser');
   if (browserIndex >= 0) run(process.execPath,
     ['prototype/browser.test.cjs', ...process.argv.slice(browserIndex+1)]);

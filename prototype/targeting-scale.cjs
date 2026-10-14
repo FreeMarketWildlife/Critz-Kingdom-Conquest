@@ -2,14 +2,16 @@
 const assert = require('node:assert/strict');
 const { performance } = require('node:perf_hooks');
 const { createHarness } = require('./test-support/harness.cjs');
+const path=require('node:path');
+const root=process.argv[2]?path.resolve(process.argv[2]):undefined;
 const results = [];
 for (const count of [80, 160, 320, 640]) {
   const times = [];
   let visits;
   for (let sample = 0; sample < 3; sample++) {
-    const h = createHarness({ transform: (name, source) => {
+    const h = createHarness({ root,transform: (name, source) => {
       if (name !== 'play.js') return source;
-      const match='let best=Infinity;for(const t of units){';
+      const match=source.includes('const consider=t=>{')?'const consider=t=>{':'let best=Infinity;for(const t of units){';
       assert.equal(source.split(match).length-1,1);
       return source.replace(match,match+'globalThis.candidateVisits++;');
     } });
@@ -20,9 +22,9 @@ for (const count of [80, 160, 320, 640]) {
     h.run('for(let i=0;i<100;i++)update(.02);');
     times.push(performance.now()-start);
     visits = h.run('candidateVisits');
-    assert.equal(visits, 100*count*count);
+    assert.ok(visits>0&&visits<=100*count*count);
   }
   results.push({units:count,updates:100,candidateVisits:visits,timesMs:times,
     medianMs:[...times].sort((a,b)=>a-b)[1]});
 }
-console.log(JSON.stringify({results,note:'Instrumented target-candidate count proves quadratic scanning. Timings include the counter and Node VM overhead; use this for scaling assessment, not browser FPS.'},null,2));
+console.log(JSON.stringify({results,note:'Instrumented candidate visits for the selected prototype (optional directory argument). Timings include the counter and Node VM overhead; use this for scaling assessment, not browser FPS.'},null,2));

@@ -31,7 +31,7 @@ function route(a,dest){const b=walkablePoint(dest);if(lineClear(a,b))return[b];c
 pointOnLane=function(l,t){const p=lanes[l],{lengths,total}=laneMetrics[l];let d=clamp(t,0,1)*total;for(let i=0;i<lengths.length;i++){if(d<=lengths[i]||i===lengths.length-1){const f=d/lengths[i];return{x:p[i][0]+(p[i+1][0]-p[i][0])*f,y:p[i][1]+(p[i+1][1]-p[i][1])*f}}d-=lengths[i]}};
 nearLane=function(p,r){return lanes.some(l=>l.slice(1).some((b,i)=>segmentDistance(p,l[i],b)<r))};
 nearestProgress=function(u,l){const p=lanes[l],{lengths,total}=laneMetrics[l];let best=Infinity,result=0,offset=0;for(let i=0;i<lengths.length;i++){const a=p[i],b=p[i+1],dx=b[0]-a[0],dy=b[1]-a[1],t=clamp(((u.x-a[0])*dx+(u.y-a[1])*dy)/(dx*dx+dy*dy),0,1),d=Math.hypot(u.x-a[0]-dx*t,u.y-a[1]-dy*t);if(d<best){best=d;result=(offset+lengths[i]*t)/total}offset+=lengths[i]}return result};
-init=function(){units=[];effects=[];projectiles=[];skillshots=[];particles=[];floats=[];decals=[];trees=[];rocks=[];obstacles=[];clock=0;waveNumber=0;nextWave=2;winner=null;kills=[0,0];uid=0;paused=false;speed=1;flashCd=0;hover=null;attackMove=false;shake=0;keys.clear();uiTimer=0;last=null;visibleUnits.length=0;document.getElementById('feed').innerHTML='';
+init=function(){resetTargeting();units=[];effects=[];projectiles=[];skillshots=[];particles=[];floats=[];decals=[];trees=[];rocks=[];obstacles=[];clock=0;waveNumber=0;nextWave=2;winner=null;kills=[0,0];uid=0;paused=false;speed=1;flashCd=0;hover=null;attackMove=false;shake=0;keys.clear();uiTimer=0;last=null;visibleUnits.length=0;document.getElementById('feed').innerHTML='';
  const random=rng(92147);
  for(const [x,y,r] of islandLayout){obstacles.push({x,y,r});obstacles.push({x:W-x,y:H-y,r})}
  for(let team=0;team<2;team++){const base=bases[team];add({...base,team,kind:'castle',name:team?'Crimson Castle':'Verdant Castle',hp:6500,range:340,damage:110,radius:70});
@@ -61,19 +61,44 @@ cast=function(u,i,p){if(!u||u.hp<=0||u.skills[i]>0||winner!==null)return;const c
  const center=i===3&&u.kit!==0&&u.kit!==2?walkablePoint({x:u.x+Math.cos(u.facing)*Math.min(dist(u,p),450),y:u.y+Math.sin(u.facing)*Math.min(dist(u,p),450)}):{x:u.x,y:u.y};
  const r=i===3?230:i===1?155:135;effects.push({x:center.x,y:center.y,r,life:i===3?.65:.24,max:i===3?.65:.24,color:kits[u.kit].color,type:'telegraph',source:u,damage:i===3?330:i===1?110:150});};
 function separate(){const mobile=units.filter(u=>u.hp>0&&['hero','minion','siege'].includes(u.kind));const bins=new Map();for(const u of mobile){const key=Math.floor(u.x/75)+','+Math.floor(u.y/75);if(!bins.has(key))bins.set(key,[]);bins.get(key).push(u)}for(const u of mobile){const bx=Math.floor(u.x/75),by=Math.floor(u.y/75);for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)for(const t of bins.get((bx+dx)+','+(by+dy))||[]){if(t.id<=u.id)continue;const r=(u.radius+t.radius)*.94,deltaX=u.x-t.x,deltaY=u.y-t.y;if(deltaX*deltaX+deltaY*deltaY>=r*r)continue;const d=dist(u,t);if(d<r&&d>.01){const f=(r-d)*.35,xx=(u.x-t.x)/d*f,yy=(u.y-t.y)/d*f;if(!blocked(u.x+xx,u.y+yy,u.radius*.8)){u.x+=xx;u.y+=yy}if(!blocked(t.x-xx,t.y-yy,t.radius*.8)){t.x-=xx;t.y-=yy}}}}}
-update=function(dt){if(winner!==null)return;clock+=dt;flashCd=Math.max(0,flashCd-dt);shake=Math.max(0,shake-dt*12);if(clock>=nextWave){spawnWave();nextWave+=25}
- for(const u of units){u.cd-=dt;u.moving=false;for(const key of ['flash','slow','shield','buff','attackAnim'])u[key]=Math.max(0,(u[key]||0)-dt);if(u.skills)for(let i=0;i<u.skills.length;i++)u.skills[i]=Math.max(0,u.skills[i]-dt);if(u.hp<=0){if(u.respawn>0){u.respawn-=dt;if(u.respawn<=0){u.hp=u.maxHp;u.pending=null;if(u.kind==='hero'){Object.assign(u,{x:bases[u.team].x+80,y:bases[u.team].y-80});u.mana=u.maxMana;u.navTimer=0;u.path=[]}else{Object.assign(u,u.home);u.aggro=null}}}continue}
-  if(u.kind==='hero'){u.mana=Math.min(u.maxMana,u.mana+dt*8);u.hp=Math.min(u.maxHp,u.hp+dt*(dist(u,bases[u.team])<210?120:1.5));if(u.recall>0){u.recall-=dt;fx(u.x,u.y,35+Math.sin(clock*5)*10,'#86d8ea','ring',.12);if(u.recall<=0){Object.assign(u,{x:bases[u.team].x+90,y:bases[u.team].y-90});u.order=null;u.path=[];u.hp=u.maxHp;u.mana=u.maxMana;if(u===selected)message('Returned to the fountain. Open the shop to spend bells.')}continue}}
-  if(u.dash){const s=Math.min(u.dash.left,900*dt),x=u.x+u.dash.x*s,y=u.y+u.dash.y*s;if(!blocked(x,y,u.radius*.8)){u.x=x;u.y=y;u.dash.left-=s;burst(u.x,u.y,kits[u.kit].color,2)}else u.dash.left=0;if(u.dash.left<=0)u.dash=null;continue}
-  if(u.pending){u.pending.time-=dt;if(u.pending.time<=0){releaseAttack(u,u.pending.target);u.pending=null}continue}if(u.kind==='barracks')continue;
+// Include dead units: an earlier unit can respawn or take damage during this same update.
+const TARGET_CELL=200,TARGET_SIDE=Math.ceil(W/TARGET_CELL),TARGET_THRESHOLD=128;
+const targetBins=Array.from({length:TARGET_SIDE*TARGET_SIDE},()=>[]);
+let targetIndexed=false;
+function targetCell(u){return clamp(Math.floor(u.y/TARGET_CELL),0,TARGET_SIDE-1)*TARGET_SIDE+clamp(Math.floor(u.x/TARGET_CELL),0,TARGET_SIDE-1)}
+function resetTargeting(){targetIndexed=false;for(const bin of targetBins)bin.length=0}
+function prepareTargeting(){if(units.length<TARGET_THRESHOLD){if(targetIndexed)resetTargeting();return}resetTargeting();targetIndexed=true;for(let i=0;i<units.length;i++){const u=units[i];u._targetOrder=i;u._targetCell=targetCell(u);targetBins[u._targetCell].push(u)}}
+function relocateTarget(u){if(!targetIndexed)return;const cell=targetCell(u);if(cell===u._targetCell)return;const previous=targetBins[u._targetCell];previous.splice(previous.indexOf(u),1);targetBins[cell].push(u);u._targetCell=cell}
+function chooseEnemyTarget(u){
+ const detection=u.kind==='hero'?430:u.kind==='tower'?u.range:320;
+ let target=null,best=Infinity;
+ const consider=t=>{if(t.hp<=0||t.team===u.team||(t.team===2&&!(u.kind==='hero'&&u.kit===4)))return;
+  const dx=u.x-t.x,dy=u.y-t.y;if(dx*dx+dy*dy>detection*detection)return;
+  const d=dist(u,t);if(d>detection)return;let priority=d;
+  if(u.kind==='tower'){if(u.aggro===t)priority=-200;else if(['minion','siege'].includes(t.kind))priority-=300}
+  else if(u.kind==='hero'&&u.kit!==4&&t.kind==='hero')priority+=130;
+  if(priority<best||(targetIndexed&&target&&priority===best&&t._targetOrder<target._targetOrder)){best=priority;target=t}
+ };
+ if(!targetIndexed){for(const t of units)consider(t);return target}
+ const left=clamp(Math.floor((u.x-detection)/TARGET_CELL),0,TARGET_SIDE-1),right=clamp(Math.floor((u.x+detection)/TARGET_CELL),0,TARGET_SIDE-1);
+ const top=clamp(Math.floor((u.y-detection)/TARGET_CELL),0,TARGET_SIDE-1),bottom=clamp(Math.floor((u.y+detection)/TARGET_CELL),0,TARGET_SIDE-1);
+ for(let y=top;y<=bottom;y++)for(let x=left;x<=right;x++)for(const t of targetBins[y*TARGET_SIDE+x])consider(t);
+ return target;
+}
+function updateUnit(u,dt){u.cd-=dt;u.moving=false;for(const key of ['flash','slow','shield','buff','attackAnim'])u[key]=Math.max(0,(u[key]||0)-dt);if(u.skills)for(let i=0;i<u.skills.length;i++)u.skills[i]=Math.max(0,u.skills[i]-dt);if(u.hp<=0){if(u.respawn>0){u.respawn-=dt;if(u.respawn<=0){u.hp=u.maxHp;u.pending=null;if(u.kind==='hero'){Object.assign(u,{x:bases[u.team].x+80,y:bases[u.team].y-80});u.mana=u.maxMana;u.navTimer=0;u.path=[]}else{Object.assign(u,u.home);u.aggro=null}}}return}
+  if(u.kind==='hero'){u.mana=Math.min(u.maxMana,u.mana+dt*8);u.hp=Math.min(u.maxHp,u.hp+dt*(dist(u,bases[u.team])<210?120:1.5));if(u.recall>0){u.recall-=dt;fx(u.x,u.y,35+Math.sin(clock*5)*10,'#86d8ea','ring',.12);if(u.recall<=0){Object.assign(u,{x:bases[u.team].x+90,y:bases[u.team].y-90});u.order=null;u.path=[];u.hp=u.maxHp;u.mana=u.maxMana;if(u===selected)message('Returned to the fountain. Open the shop to spend bells.')}return}}
+  if(u.dash){const s=Math.min(u.dash.left,900*dt),x=u.x+u.dash.x*s,y=u.y+u.dash.y*s;if(!blocked(x,y,u.radius*.8)){u.x=x;u.y=y;u.dash.left-=s;burst(u.x,u.y,kits[u.kit].color,2)}else u.dash.left=0;if(u.dash.left<=0)u.dash=null;return}
+  if(u.pending){u.pending.time-=dt;if(u.pending.time<=0){releaseAttack(u,u.pending.target);u.pending=null}return}if(u.kind==='barracks')return;
   const mobile=['hero','minion','siege'].includes(u.kind),player=u===selected;let target=null;
-  if(player&&u.order?.point&&!u.order.attack){move(u,u.order.point,dt,u.slow?.55:1);if(dist(u,u.order.point)<16)u.order=null;continue}
+  if(player&&u.order?.point&&!u.order.attack){move(u,u.order.point,dt,u.slow?.55:1);if(dist(u,u.order.point)<16)u.order=null;return}
   if(player&&u.order?.target){if(u.order.target.hp>0)target=u.order.target;else u.order=null}
   if(!target&&u.team===2){if(u.aggro?.hp>0&&dist(u,u.aggro)<450&&dist(u,u.home)<300)target=u.aggro;else{u.aggro=null;u.hp=Math.min(u.maxHp,u.hp+dt*40);if(dist(u,u.home)>10)move(u,u.home,dt)}}
-  if(!target&&u.team!==2&&(!player||u.order?.attack)){const detection=u.kind==='hero'?430:u.kind==='tower'?u.range:320;let best=Infinity;for(const t of units){if(t.hp<=0||t.team===u.team||(t.team===2&&!(u.kind==='hero'&&u.kit===4)))continue;const dx=u.x-t.x,dy=u.y-t.y;if(dx*dx+dy*dy>detection*detection)continue;const d=dist(u,t);if(d>detection)continue;let priority=d;if(u.kind==='tower'){if(u.aggro===t)priority=-200;else if(['minion','siege'].includes(t.kind))priority-=300}else if(u.kind==='hero'&&u.kit!==4&&t.kind==='hero')priority+=130;if(priority<best){best=priority;target=t}}}
+  if(!target&&u.team!==2&&(!player||u.order?.attack))target=chooseEnemyTarget(u);
   if(target){if(dist(u,target)<=u.range+target.radius){if(u.cd<=0)attack(u,target);if(u.kind==='hero'&&!player&&target.kind==='hero'&&Math.random()<dt*.15)cast(u,Math.random()<.1?3:0,target)}else if(mobile||u.team===2)move(u,target,dt,u.slow?.55:1)}else if(mobile){if(player){if(u.order?.point){move(u,u.order.point,dt);if(dist(u,u.order.point)<16)u.order=null}}else if(u.kind==='hero'&&u.kit===4){const camp=units.filter(t=>t.team===2&&t.hp>0).sort((a,b)=>dist(u,a)-dist(u,b))[0];if(camp)move(u,camp,dt)}else{const progress=nearestProgress(u,u.lane);const limit=u.kind==='hero'?(u.team?.48:.52):(u.team?0:1);const next=clamp(progress+(u.team?-1:1)*.025,Math.min(progress,limit),Math.max(progress,limit));move(u,pointOnLane(u.lane,next),dt)}}
   if(u.kind==='hero'&&!player&&u.hp/u.maxHp<.22){u.order=null;move(u,pointOnLane(u.lane,u.team?.68:.32),dt)}
- }
+}
+update=function(dt){if(winner!==null)return;clock+=dt;flashCd=Math.max(0,flashCd-dt);shake=Math.max(0,shake-dt*12);if(clock>=nextWave){spawnWave();nextWave+=25}
+ prepareTargeting();for(const u of units){updateUnit(u,dt);relocateTarget(u)}
  separate();for(const p of projectiles){if(p.target.hp<=0){p.done=true;continue}p.trail.push({x:p.x,y:p.y});if(p.trail.length>5)p.trail.shift();const d=dist(p,p.target);if(d<p.speed*dt){hurt(p.target,p.damage,p.source);p.done=true}else{p.x+=(p.target.x-p.x)/d*p.speed*dt;p.y+=(p.target.y-p.y)/d*p.speed*dt}}
  projectiles=projectiles.filter(p=>!p.done);for(const p of skillshots){p.trail.push({x:p.x,y:p.y});if(p.trail.length>8)p.trail.shift();const step=p.speed*dt;p.x+=p.dx*step;p.y+=p.dy*step;p.left-=step;if(blocked(p.x,p.y,5))p.left=0;const hit=units.find(t=>t.hp>0&&t.team!==p.source.team&&dist(p,t)<t.radius+p.radius);if(hit){hurt(hit,p.damage,p.source);hit.slow=1.5;p.left=0;fx(p.x,p.y,45,p.color);burst(p.x,p.y,p.color,15)}}skillshots=skillshots.filter(p=>p.left>0);
  for(const e of effects){e.life-=dt;if(e.type==='telegraph'&&e.life<=0){for(const t of units)if(t.hp>0&&t.team!==e.source.team&&dist(t,e)<e.r+t.radius){hurt(t,e.damage,e.source);t.slow=1.5}fx(e.x,e.y,e.r,e.color,'blast',.5);burst(e.x,e.y,e.color,35);if(e.source===selected)shake=5}}
