@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/benchmark.cjs"
+      ],
+      "elapsedMs": 20.854583,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/browser.test.cjs"
+      ],
+      "elapsedMs": 22.113208,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/check.cjs"
+      ],
+      "elapsedMs": 21.608750000000008,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/game.js"
+      ],
+      "elapsedMs": 21.182958,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/play.js"
+      ],
+      "elapsedMs": 20.822542,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/runtime.test.cjs"
+      ],
+      "elapsedMs": 22.014750000000006,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/simulation.test.cjs"
+      ],
+      "elapsedMs": 20.36670799999999,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/soak.cjs"
+      ],
+      "elapsedMs": 21.45720800000001,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/targeting-scale.cjs"
+      ],
+      "elapsedMs": 20.351,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/verify-performance.cjs"
+      ],
+      "elapsedMs": 21.097250000000003,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/test-support/harness.cjs"
+      ],
+      "elapsedMs": 20.68354199999999,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "prototype/simulation.test.cjs"
+      ],
+      "elapsedMs": 1250.0967910000002,
+      "output": "Gameplay checks passed { checks: 37, obstacles: 68 }",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "prototype/runtime.test.cjs"
+      ],
+      "elapsedMs": 338.8248330000001,
+      "output": "✔ experience cannot revive a dead nearby Conqueror (10.608584ms)\n✔ damage cancels recall for a Conqueror after selection changes (7.437625ms)\n✔ death clears transient movement and channel state (7.670375ms)\n✔ Flash cannot teleport a dead Conqueror or consume its cooldown (7.414292ms)\n✔ Flash cancels a recall and attack windup when it moves the Conqueror (7.555666ms)\n✔ recall does not preserve a dash to execute after returning to the fountain (9.609708ms)\n✔ repeated enemy orders preserve attack windup; stop cancels it (7.190417ms)\n✔ held/repeated spell input cannot duplicate a cast (7.130834ms)\n✔ hidden callbacks suspend simulation and rendering; resume excludes hidden time (20.457375ms)\n✔ restart clears references and input state from the previous battle (12.902333ms)\n✔ losing focus clears held movement and attack-move inputs (7.36975ms)\n✔ world terrain is reused when the viewport resizes (18.246833ms)\n✔ render culling retains tall structures near the visible edge (16.685209ms)\n✔ finished combat tones release their audio graph connections (7.052041ms)\n✔ collision checks match the original circle predicate, including boundaries (42.065417ms)\n✔ lane interpolation and progress agree along all lane segments (7.432209ms)\n✔ routes remain collision free across repeated searches and a structure opening (76.1515ms)\nℹ tests 17\nℹ suites 0\nℹ pass 17\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 310.672417",
+      "passed": true
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsedMs": 13.936208000000079,
+      "output": "",
+      "passed": true
+    }
+  ],
+  "productionBuild": "Static HTML/CSS/JavaScript: no compiler, bundler or production build command is configured."
+}

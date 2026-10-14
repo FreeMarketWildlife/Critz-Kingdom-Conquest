@@ -1,0 +1,24 @@
+{
+  "codeCommit": "9c4d5623c522f5b58f210021ce50ac9e5a046454",
+  "elapsedWallSeconds": 600.021102542,
+  "matches": 12,
+  "restarts": 11,
+  "pauseResumeCycles": 12,
+  "maxSimulationAdvanceDuringPause": 0,
+  "normalPostGcGrowthMiB": 0.09733200073242188,
+  "normalChromeRssGrowthMiB": 15.875,
+  "heapMinMiB": 2.298755645751953,
+  "heapMaxMiB": 3.6882705688476562,
+  "audio": {
+    "created": 604,
+    "disconnected": 604
+  },
+  "runtimeErrors": [],
+  "cleanup": {
+    "serverClosed": true,
+    "browserDisconnected": true
+  },
+  "sourceDigestsMatchActualCheckout": true,
+  "preexistingUserFilesVerifiedUnchanged": 229,
+  "pushOrDeploymentPerformed": false
+}

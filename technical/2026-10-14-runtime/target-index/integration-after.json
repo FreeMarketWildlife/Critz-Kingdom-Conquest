@@ -1,0 +1,10 @@
+{
+  "integratedHead": "9c4d5623c522f5b58f210021ce50ac9e5a046454",
+  "branch": "codex/gorilla-pc-handoff",
+  "rollbackRef": "codex/kingdom-pre-integration-2026-10-14",
+  "method": "fast-forward only",
+  "existingUserFilesVerifiedUnchanged": 229,
+  "userChangesCommitted": false,
+  "pushOrDeploymentPerformed": false,
+  "rollbackRehearsalPassed": true
+}

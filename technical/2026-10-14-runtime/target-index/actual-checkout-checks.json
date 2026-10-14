@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/benchmark.cjs"
+      ],
+      "elapsedMs": 27.26725,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/browser-soak.cjs"
+      ],
+      "elapsedMs": 23.36133300000001,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/browser.test.cjs"
+      ],
+      "elapsedMs": 21.447833000000003,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/check.cjs"
+      ],
+      "elapsedMs": 21.140625,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/game.js"
+      ],
+      "elapsedMs": 20.951624999999993,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/play.js"
+      ],
+      "elapsedMs": 20.95275000000001,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/runtime.test.cjs"
+      ],
+      "elapsedMs": 20.124749999999977,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/simulation.test.cjs"
+      ],
+      "elapsedMs": 20.817999999999984,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/soak.cjs"
+      ],
+      "elapsedMs": 20.787750000000017,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/target-benchmark.cjs"
+      ],
+      "elapsedMs": 22.424667,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/targeting-scale.cjs"
+      ],
+      "elapsedMs": 23.65983300000002,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/targeting.test.cjs"
+      ],
+      "elapsedMs": 20.812915999999973,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/verify-performance.cjs"
+      ],
+      "elapsedMs": 20.667625000000044,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "prototype/test-support/harness.cjs"
+      ],
+      "elapsedMs": 20.90787499999999,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "prototype/simulation.test.cjs"
+      ],
+      "elapsedMs": 1237.556125,
+      "output": "Gameplay checks passed { checks: 37, obstacles: 68 }",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "prototype/runtime.test.cjs"
+      ],
+      "elapsedMs": 331.94224999999983,
+      "output": "\u2714 experience cannot revive a dead nearby Conqueror (10.666375ms)\n\u2714 damage cancels recall for a Conqueror after selection changes (7.3025ms)\n\u2714 death clears transient movement and channel state (7.680625ms)\n\u2714 Flash cannot teleport a dead Conqueror or consume its cooldown (7.77275ms)\n\u2714 Flash cancels a recall and attack windup when it moves the Conqueror (7.425583ms)\n\u2714 recall does not preserve a dash to execute after returning to the fountain (8.379666ms)\n\u2714 repeated enemy orders preserve attack windup; stop cancels it (7.010417ms)\n\u2714 held/repeated spell input cannot duplicate a cast (6.8815ms)\n\u2714 hidden callbacks suspend simulation and rendering; resume excludes hidden time (19.914333ms)\n\u2714 restart clears references and input state from the previous battle (12.843167ms)\n\u2714 losing focus clears held movement and attack-move inputs (7.064042ms)\n\u2714 world terrain is reused when the viewport resizes (18.630334ms)\n\u2714 render culling retains tall structures near the visible edge (16.547667ms)\n\u2714 finished combat tones release their audio graph connections (7.104125ms)\n\u2714 collision checks match the original circle predicate, including boundaries (41.621125ms)\n\u2714 lane interpolation and progress agree along all lane segments (7.324458ms)\n\u2714 routes remain collision free across repeated searches and a structure opening (71.216083ms)\n\u2139 tests 17\n\u2139 suites 0\n\u2139 pass 17\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 302.05225",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "prototype/targeting.test.cjs"
+      ],
+      "elapsedMs": 17554.561332999998,
+      "output": "\u2714 100 seeded layouts preserve target choice with shuffled ordering and cell/range boundaries (61.024833ms)\n\u2714 equal-priority ties retain array order across cells, shuffled IDs and tower aggro (7.373458ms)\n\u2714 neutral eligibility, hero penalties and exact detection limits match the legacy scan (7.475459ms)\n\u2714 index/linear threshold transitions clear stale buckets and retain new array ordering (7.45025ms)\n\u2714 later actors observe earlier respawn, recall, dash, movement and death in the same tick (82.44025ms)\n\u2714 six seeded sustained simulations have identical complete public state and RNG streams (10061.162ms)\n\u2714 adversarial coincident, crowded, dispersed and boundary populations stay equivalent (7206.632ms)\n\u2139 tests 7\n\u2139 suites 0\n\u2139 pass 7\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 17526.194167",
+      "passed": true
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "codex/kingdom-pre-integration-2026-10-14..HEAD",
+        "--check"
+      ],
+      "elapsedMs": 18.661958000000595,
+      "output": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "prototype/browser.test.cjs",
+        "/tmp/kingdom-runtime-baseline"
+      ],
+      "elapsedMs": 5498.256375000001,
+      "output": "{\n  \"browser\": \"155.0.8059.40\",\n  \"visual\": {\n    \"before\": [\n      \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n      \"6a33d9621a150283498da36b0435871603b93aa9e9f827893b4f6ad86366c97e\",\n      \"14fe9c36d349f83916f40b591244d7e0559e6e1385df488ced40523b29c1a214\",\n      \"aa2b4b4b94fb15d81aa76b5acbd82faac2f52b6931f50711471a8035ba9fcec4\",\n      \"a1316c3951a62759566723c92348739e6a9042ba6feb66d66d719bcaa22b90b3\",\n      \"3b9544abe15ac1da63821814ae47ae1d76067252a8d008a8785f17dbe2abe7c4\",\n      \"531a4c88cb34deb7a6e30f0b5b79efcf782ebf4ad34b84c43cee06d8f1fb73ac\",\n      \"20b62ab03ea500a1aec5293059763368116e52afd58fea664dee8b213573b299\"\n    ],\n    \"after\": [\n      \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n      \"6a33d9621a150283498da36b0435871603b93aa9e9f827893b4f6ad86366c97e\",\n      \"14fe9c36d349f83916f40b591244d7e0559e6e1385df488ced40523b29c1a214\",\n      \"aa2b4b4b94fb15d81aa76b5acbd82faac2f52b6931f50711471a8035ba9fcec4\",\n      \"a1316c3951a62759566723c92348739e6a9042ba6feb66d66d719bcaa22b90b3\",\n      \"3b9544abe15ac1da63821814ae47ae1d76067252a8d008a8785f17dbe2abe7c4\",\n      \"531a4c88cb34deb7a6e30f0b5b79efcf782ebf4ad34b84c43cee06d8f1fb73ac\",\n      \"20b62ab03ea500a1aec5293059763368116e52afd58fea664dee8b213573b299\"\n    ]\n  },\n  \"performance\": {\n    \"before\": {\n      \"simulationMs\": [\n        431,\n        380.90000009536743,\n        364\n      ],\n      \"drawMs\": [\n        53,\n        48.30000019073486,\n        48.200000286102295\n      ],\n      \"simulationStartHashes\": [\n        \"22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7\",\n        \"22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7\",\n        \"22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7\"\n      ],\n      \"simulationEndHashes\": [\n        \"f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf\",\n        \"f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf\",\n        \"f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf\"\n      ],\n      \"drawStartHashes\": [\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\"\n      ],\n      \"drawEndHashes\": [\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\"\n      ],\n      \"workload\": {\n        \"seed\": 314159,\n        \"simulationUpdates\": 1000,\n        \"simulationDt\": 0.02,\n        \"drawWarmups\": 2,\n        \"drawCalls\": 200,\n        \"viewport\": [\n          1440,\n          900\n        ],\n        \"devicePixelRatio\": 1\n      },\n      \"heldAbilityClickWorks\": false\n    },\n    \"after\": {\n      \"simulationMs\": [\n        180.69999980926514,\n        166.90000009536743,\n        163\n      ],\n      \"drawMs\": [\n        26.299999713897705,\n        20.300000190734863,\n        20\n      ],\n      \"simulationStartHashes\": [\n        \"22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7\",\n        \"22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7\",\n        \"22811bf4f7fe0808acb76adfc65e6669dd26b6951f834b03751365580702dcf7\"\n      ],\n      \"simulationEndHashes\": [\n        \"f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf\",\n        \"f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf\",\n        \"f359690d3b79a6a2cf771f2d5650489d6874210ebd887cbd9ae1c334b30b55bf\"\n      ],\n      \"drawStartHashes\": [\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\"\n      ],\n      \"drawEndHashes\": [\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\",\n        \"7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30\"\n      ],\n      \"workload\": {\n        \"seed\": 314159,\n        \"simulationUpdates\": 1000,\n        \"simulationDt\": 0.02,\n        \"drawWarmups\": 2,\n        \"drawCalls\": 200,\n        \"viewport\": [\n          1440,\n          900\n        ],\n        \"devicePixelRatio\": 1\n      },\n      \"heldAbilityClickWorks\": true\n    }\n  },\n  \"checks\": [\n    \"eight pixel-identical initial/animated combat canvas views against baseline\",\n    \"benchmark workloads/start states and before/after drawing pixels match for every sample\",\n    \"ability click survives HUD refresh between pointer down/up\",\n    \"keyboard cast, mana cost, cooldown and button identity\",\n    \"resize reuses terrain canvas\",\n    \"right-click movement\",\n    \"shop armor cannot revive a dead Conqueror\",\n    \"spectating closes the shop\",\n    \"restart restores playable Vesper\",\n    \"repeated/held keyboard spell input costs mana once\",\n    \"repeated attack command preserves windup; stop interrupts it\",\n    \"hidden callbacks do not update/draw; resume drops elapsed hidden time\",\n    \"320x640/320x480/390x844 portrait, 768x1024 tablet and 844x390 landscape controls/shop fit and respond\",\n    \"touch ability taps, repeated purchases, character switch and restart\",\n    \"ten real WebAudio tones disconnect twenty nodes; restart reuses the context\",\n    \"native Chrome freeze/resume with real animation frames remains finite\",\n    \"no browser runtime errors; local assets loaded with remote fonts blocked\"\n  ],\n  \"visibilityPolicy\": {\n    \"suspended\": true,\n    \"firstResume\": true,\n    \"secondAdvance\": 0.02,\n    \"method\": \"synthetic document.hidden + visibilitychange; deterministic 60-second gaps\"\n  },\n  \"mobile\": [\n    {\n      \"width\": 320,\n      \"height\": 640,\n      \"controls\": [\n        {\n          \"id\": \"choose\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"pause\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"speed\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"reset\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"shop\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"0\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"1\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"2\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"3\",\n          \"inside\": true,\n          \"hit\": true\n        }\n      ],\n      \"panel\": {\n        \"x\": 20,\n        \"y\": 175,\n        \"width\": 290,\n        \"height\": 320\n      }\n    },\n    {\n      \"width\": 320,\n      \"height\": 480,\n      \"controls\": [\n        {\n          \"id\": \"choose\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"pause\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"speed\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"reset\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"shop\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"0\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"1\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"2\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"3\",\n          \"inside\": true,\n          \"hit\": true\n        }\n      ],\n      \"panel\": {\n        \"x\": 20,\n        \"y\": 66,\n        \"width\": 290,\n        \"height\": 276\n      }\n    },\n    {\n      \"width\": 390,\n      \"height\": 844,\n      \"controls\": [\n        {\n          \"id\": \"choose\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"pause\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"speed\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"reset\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"shop\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"0\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"1\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"2\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"3\",\n          \"inside\": true,\n          \"hit\": true\n        }\n      ],\n      \"panel\": {\n        \"x\": 20,\n        \"y\": 379,\n        \"width\": 290,\n        \"height\": 320\n      }\n    },\n    {\n      \"width\": 768,\n      \"height\": 1024,\n      \"controls\": [\n        {\n          \"id\": \"choose\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"pause\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"speed\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"reset\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"shop\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"0\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"1\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"2\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"3\",\n          \"inside\": true,\n          \"hit\": true\n        }\n      ],\n      \"panel\": {\n        \"x\": 20,\n        \"y\": 559,\n        \"width\": 290,\n        \"height\": 320\n      }\n    },\n    {\n      \"width\": 844,\n      \"height\": 390,\n      \"controls\": [\n        {\n          \"id\": \"choose\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"pause\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"speed\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"reset\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"shop\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"0\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"1\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"2\",\n          \"inside\": true,\n          \"hit\": true\n        },\n        {\n          \"id\": \"3\",\n          \"inside\": true,\n          \"hit\": true\n        }\n      ],\n      \"panel\": {\n        \"x\": 20,\n        \"y\": 66,\n        \"width\": 290,\n        \"height\": 278\n      }\n    }\n  ],\n  \"cleanup\": {\n    \"serverClosed\": true,\n    \"browserDisconnected\": true\n  }\n}",
+      "passed": true
+    }
+  ],
+  "productionBuild": "Static HTML/CSS/JavaScript: no compiler, bundler or production build command is configured."
+}

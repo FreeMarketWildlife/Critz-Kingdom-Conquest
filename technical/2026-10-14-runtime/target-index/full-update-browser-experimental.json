@@ -1,0 +1,452 @@
+{
+  "reference": "b320be9",
+  "seed": 314159,
+  "samples": 5,
+  "mode": "Chrome",
+  "workloads": {
+    "typical": {
+      "receipt": {
+        "setup": "selected=null;",
+        "steps": 2000,
+        "dt": 0.02,
+        "seed": 314159
+      },
+      "before": [
+        {
+          "elapsedMs": 575.3999996185303,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 483.40000009536743,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 471.90000009536743,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 455.30000019073486,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 465.30000019073486,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        }
+      ],
+      "after": [
+        {
+          "elapsedMs": 464.1000003814697,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 439.69999980926514,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 434.69999980926514,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 445.40000009536743,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        },
+        {
+          "elapsedMs": 426.6000003814697,
+          "units": 80,
+          "clock": 40.000000000000654,
+          "initialHash": "883f6d203a01801f390a04c8b5a9567886b0da4f1735b83df81f6c86677284b9",
+          "finalHash": "250003f68ee08f5d1942fd5cea476438e0334ce258d9bbde6b70fd3ce9a8de40"
+        }
+      ],
+      "beforeMedianMs": 471.90000009536743,
+      "afterMedianMs": 439.69999980926514,
+      "speedup": 1.0732317496021608
+    },
+    "reinforcedLanes": {
+      "receipt": {
+        "setup": "selected=null;for(let i=0;i<12;i++)spawnWave();let n=0;\n  for(const u of units)if(u.kind==='minion'||u.kind==='siege'){\n   const p=walkablePoint(pointOnLane(u.lane,.15+(n++%29)/29*.7),u.radius*.8);u.x=p.x;u.y=p.y;\n  }",
+        "steps": 1000,
+        "dt": 0.02,
+        "seed": 314159
+      },
+      "before": [
+        {
+          "elapsedMs": 4459.10000038147,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 4439.800000190735,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 4469.5,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 4534,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 4524.699999809265,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        }
+      ],
+      "after": [
+        {
+          "elapsedMs": 986.5999999046326,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 965.3000001907349,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 967.0999999046326,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 980.1999998092651,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        },
+        {
+          "elapsedMs": 979.5,
+          "units": 274,
+          "clock": 19.999999999999662,
+          "initialHash": "8156f93a8bbdfc33168cc5e3754c5e8f1082acfbff326ce8a9d0c9b447ada029",
+          "finalHash": "767faf6ca98473740956a0935ab958302a45e3c175e05cda09a515d149043928"
+        }
+      ],
+      "beforeMedianMs": 4469.5,
+      "afterMedianMs": 979.5,
+      "speedup": 4.563042368555386
+    },
+    "dispersedHigh": {
+      "receipt": {
+        "setup": "selected=null;nextWave=Infinity;\n  for(let i=0;i<640;i++){const p=walkablePoint({x:150+(i%20)*150,y:100+Math.floor(i/20)*95},11);\n   add({...p,team:i%2,kind:'minion',hp:1000,damage:12,range:i%2?240:46,radius:13,speed:112,lane:i%3});\n  }",
+        "steps": 500,
+        "dt": 0.02,
+        "seed": 314159
+      },
+      "before": [
+        {
+          "elapsedMs": 6188.799999713898,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 6275.099999904633,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 6253.699999809265,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 6252.200000286102,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 6294.400000095367,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        }
+      ],
+      "after": [
+        {
+          "elapsedMs": 836.1000003814697,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 829.6999998092651,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 826.9000000953674,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 828.4000000953674,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        },
+        {
+          "elapsedMs": 823,
+          "units": 674,
+          "clock": 9.999999999999876,
+          "initialHash": "ff5db01d8a7cfd3f7817f2013c719d0e032d4badfa8c4d86ef770a99eadfb412",
+          "finalHash": "2ab90254f87653eddcf5b38d4227a5f15cd6f0ca50e3ff8c368659764fc859bb"
+        }
+      ],
+      "beforeMedianMs": 6253.699999809265,
+      "afterMedianMs": 828.4000000953674,
+      "speedup": 7.549130853560265
+    },
+    "coincidentHigh": {
+      "receipt": {
+        "setup": "selected=null;nextWave=Infinity;obstacles=[];buildNav();\n  for(let i=0;i<640;i++)add({x:1600,y:1600,team:i%2,kind:'minion',hp:500,damage:12,range:240,radius:13,speed:112,lane:i%3});",
+        "steps": 250,
+        "dt": 0.02,
+        "seed": 314159
+      },
+      "before": [
+        {
+          "elapsedMs": 2687.199999809265,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2603.4000000953674,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2590.199999809265,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2586.8999996185303,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2587.300000190735,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        }
+      ],
+      "after": [
+        {
+          "elapsedMs": 2603,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2562.4000000953674,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2582.2999997138977,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2575.5999999046326,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        },
+        {
+          "elapsedMs": 2565.4000000953674,
+          "units": 670,
+          "clock": 4.999999999999981,
+          "initialHash": "52ff1f6219b10ef0b6ef89699a3f20f65c3850cb5796e29aea063553442370b1",
+          "finalHash": "ed78bab1d1b9b0dc05967279c3acb54898dacf93b2ad75f88911f1cd84cf505c"
+        }
+      ],
+      "beforeMedianMs": 2590.199999809265,
+      "afterMedianMs": 2575.5999999046326,
+      "speedup": 1.005668582041145
+    },
+    "playableFrames": {
+      "receipt": {
+        "setup": "",
+        "steps": 250,
+        "dt": 0.02,
+        "frame": true,
+        "seed": 314159
+      },
+      "before": [
+        {
+          "elapsedMs": 83.69999980926514,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 75.7999997138977,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 74.09999990463257,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 72.5,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 70.2999997138977,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        }
+      ],
+      "after": [
+        {
+          "elapsedMs": 88.5,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 69.89999961853027,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 71.60000038146973,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 70.19999980926514,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        },
+        {
+          "elapsedMs": 67.40000009536743,
+          "units": 79,
+          "clock": 5.019999999999984,
+          "initialHash": "4996a857e9fac9a2ca1ceb0dc5f19eeb630e7ee8412e2bf3cde898173c44f896",
+          "finalHash": "b41d9f990b459a74b207d9633ecba91351b47dab170a4f5330a8e91a6c93f6f3"
+        }
+      ],
+      "beforeMedianMs": 74.09999990463257,
+      "afterMedianMs": 70.19999980926514,
+      "speedup": 1.0555555570650115
+    }
+  },
+  "browser": "155.0.8059.40",
+  "passed": true,
+  "note": "Paired/alternating execution order. All index build/relocation, navigation, separation, combat, FX and removal costs are included; playableFrames also includes rendering and HUD work. State/RNG hashes exclude only private target-index bookkeeping.",
+  "cleanup": {
+    "serverClosed": true,
+    "browserDisconnected": true
+  },
+  "sourceSha256": {
+    "before": {
+      "game.js": "e83575ee552ea00bc3379df64959860780049262b12487533e4bba2ef96e607d",
+      "play.js": "f3189bffc8ed61fb55281455b48e0a57943c1efbb58307f26ebcd00326548e50"
+    },
+    "after": {
+      "game.js": "e83575ee552ea00bc3379df64959860780049262b12487533e4bba2ef96e607d",
+      "play.js": "769872cda9ca6f91361b0ab2635062cbae777ffcc5ebc33627bd1889576a26f2"
+    }
+  },
+  "sourceReceiptNote": "Source digests recorded after timing; gameplay sources remained unchanged between these measurements and this receipt."
+}

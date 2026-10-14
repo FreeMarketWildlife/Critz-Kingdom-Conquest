@@ -1,0 +1,14 @@
+{
+  "original": {
+    "rawBytes": 57684,
+    "calculatedGzipBytes": 21199
+  },
+  "preIndex": {
+    "rawBytes": 60160,
+    "calculatedGzipBytes": 22041
+  },
+  "integrated": {
+    "rawBytes": 61898,
+    "calculatedGzipBytes": 22574
+  }
+}

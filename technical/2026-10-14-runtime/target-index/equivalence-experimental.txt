@@ -1,0 +1,14 @@
+✔ 100 seeded layouts preserve target choice with shuffled ordering and cell/range boundaries (65.464791ms)
+✔ equal-priority ties retain array order across cells, shuffled IDs and tower aggro (8.549ms)
+✔ neutral eligibility, hero penalties and exact detection limits match the legacy scan (8.845792ms)
+✔ later actors observe earlier respawn, recall, dash, movement and death in the same tick (90.724333ms)
+✔ six seeded sustained simulations have identical complete public state and RNG streams (10642.182375ms)
+✔ adversarial coincident, crowded, dispersed and boundary populations stay equivalent (7399.657167ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18339.245208

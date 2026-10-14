@@ -1,0 +1,87 @@
+{
+  "node": "v24.21.0",
+  "platform": "darwin/arm64",
+  "seed": 314159,
+  "sourceSha256": {
+    "game.js": "e83575ee552ea00bc3379df64959860780049262b12487533e4bba2ef96e607d",
+    "play.js": "f7d1625283be1d401c24f33fc4a50914ec95c5b12ba5d115e5d25989e7b1c507"
+  },
+  "samples": 3,
+  "maxRssMiB": 151.73,
+  "results": {
+    "simulation": {
+      "samplesMs": [
+        2172.179,
+        2050.587,
+        2064.606
+      ],
+      "medianMs": 2064.606,
+      "units": 76,
+      "simulatedSeconds": 99.99999999999724,
+      "workloadSha256": "29263518f46d950ecd14fe469a185857da514beeeeb752b9a8a442e8cb932ae9",
+      "stateSha256": "9ddf526714ce49fbf60747de223395b2f5281bd1fe356859ccad8556c68dcf2d",
+      "sampleStateHashes": [
+        "9ddf526714ce49fbf60747de223395b2f5281bd1fe356859ccad8556c68dcf2d",
+        "9ddf526714ce49fbf60747de223395b2f5281bd1fe356859ccad8556c68dcf2d",
+        "9ddf526714ce49fbf60747de223395b2f5281bd1fe356859ccad8556c68dcf2d"
+      ]
+    },
+    "navigation": {
+      "samplesMs": [
+        22.961,
+        22.514,
+        22.511
+      ],
+      "medianMs": 22.514,
+      "units": 46,
+      "simulatedSeconds": 0,
+      "workloadSha256": "db567ced28cc50de9681aee51fd022d7cc1f5dbcb1a120b42e217e47dd36f69c",
+      "stateSha256": "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+      "sampleStateHashes": [
+        "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+        "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736",
+        "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736"
+      ]
+    },
+    "targeting": {
+      "samplesMs": [
+        1638.871,
+        1671.945,
+        1613.856
+      ],
+      "medianMs": 1638.871,
+      "units": 480,
+      "simulatedSeconds": 4.999999999999981,
+      "workloadSha256": "de842903e1268cd546541a057d04d06f6a56116d9ff40c18dd3fc150f1d4f6d9",
+      "stateSha256": "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+      "sampleStateHashes": [
+        "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+        "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53",
+        "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53"
+      ]
+    },
+    "render": {
+      "warmCanvasCalls": {
+        "setTransform": 1,
+        "clearRect": 1,
+        "fillRect": 49,
+        "translate": 7,
+        "scale": 1,
+        "beginPath": 243,
+        "ellipse": 136,
+        "fill": 226,
+        "moveTo": 40,
+        "lineTo": 91,
+        "stroke": 24,
+        "save": 5,
+        "rotate": 3,
+        "restore": 5,
+        "fillText": 5,
+        "closePath": 24,
+        "arc": 67,
+        "drawImage": 1,
+        "strokeRect": 1
+      }
+    }
+  }
+}

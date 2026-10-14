@@ -1,0 +1,15 @@
+{
+  "rollbackRef": "codex/kingdom-pre-integration-2026-10-14",
+  "rehearsalPath": "/tmp/kingdom-runtime-rollback-rehearsal",
+  "method": "git reset --keep in disposable detached worktree",
+  "verifiedFiles": {
+    "art/conquerors/gorilla/gorilla_rodin_rigged.blend": "cefd5c7fee3e57f4780738480b7274c5ce0ee6b75d4383781a8b7503003d02e7",
+    "ideas/00-vision-and-lore.md": "9a54e6083a5a31a0e99172d234bf42451b38f9e430a80e134aa24598e3989691",
+    "ideas/01-conqueror-roster.md": "cdabfca038ba4e8a216850c1e16acbf8d3fd95b44a935fef43dbc8cffe7cf1f8",
+    "ideas/README.md": "c8919745c90fd5cbc7bbb5bcae94d5c9d55ce5473252bd12f7afc6d6aaea3b32",
+    "ideas/Conqueror Interview.md": "4ece3209b7448096887c0d0d9e96069134a1b9e2dfa6344dfec22724ce537d62"
+  },
+  "returnedToHead": "7c189fb09be9b5d0b2b5533a8c78e48f6a8a0845",
+  "userFilesPreserved": true,
+  "actualCheckoutReset": false
+}

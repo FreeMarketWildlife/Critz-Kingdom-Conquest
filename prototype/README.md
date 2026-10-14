@@ -57,6 +57,7 @@ The runtime regressions cover death/level-up interactions, recall cancellation, 
 node prototype/benchmark.cjs
 node --expose-gc prototype/soak.cjs
 node prototype/verify-performance.cjs
+node prototype/target-benchmark.cjs
 ```
 
 Optional browser checks require Playwright and Chrome. They create a temporary browser profile, bind an ephemeral port on `127.0.0.1`, and verify the offline font fallback:
@@ -64,11 +65,19 @@ Optional browser checks require Playwright and Chrome. They create a temporary b
 ```sh
 node prototype/browser.test.cjs
 node prototype/check.cjs --browser
+node prototype/target-benchmark.cjs --browser
+node prototype/browser-soak.cjs
 ```
 
 Set `KINGDOM_PLAYWRIGHT_MODULE` to an installed Playwright module path if it is outside this repository, or `KINGDOM_BROWSER_EXECUTABLE` to another Chromium executable. An optional first argument points to a baseline prototype directory for pixel comparisons. `KINGDOM_QA_OUTPUT` enables screenshots. Measurements and the optimization handoff are in [the runtime report](../technical/2026-10-14-runtime/REPORT.md). This static prototype has no compilation or bundling step.
 
 Browser coverage includes narrow/tablet/landscape control bounds, touch ability/shop buttons, repeated and interrupted inputs, visibility suspension, native Chrome freeze/resume, and WebAudio cleanup. Touch checks cover existing buttons; movement still uses the documented mouse/keyboard controls. `verify-performance.cjs` reconstructs only the performance changes from pinned commit `7c189fb` and verifies equal fixed-seed workloads and resulting state hashes. `targeting-scale.cjs` isolates the current all-unit target-scan scaling for further profiling.
+
+Combat target queries use a 200-unit grid at populations of 128 or more and retain a linear scan below that threshold. Every processed unit updates its grid position immediately, including recall and respawn; original array order resolves equal priorities. The seven target-equivalence tests in `check.cjs` compare the pinned pre-index commit `b320be9`, complete public simulation state, and RNG streams across seeded and adversarial cases. These comparison tools require that Git history.
+
+`target-benchmark.cjs` measures complete updates, including grid preparation/relocation, navigation, separation, combat and effects, against `b320be9`. Browser mode also measures playable frames including drawing and HUD work. `browser-soak.cjs` uses native real-time frames for ten minutes by default: twelve 50-second matches, twelve five-second pauses, eleven restarts, and extra ordinary waves every third match for stress. It records forced-GC JavaScript heap, aggregate Chrome-process RSS, gameplay state and audio cleanup. This differs from the accelerated 900-simulated-second Node soak. Set `KINGDOM_SOAK_OUTPUT` for a different output file; `KINGDOM_SOAK_MATCHES` and `KINGDOM_SOAK_MATCH_MS` are intended for runner smoke tests.
+
+When unrelated user edits are present, `KINGDOM_CHECK_BASE=<rollback-ref>` makes the aggregate's whitespace check cover the integrated commits while leaving those edits untouched.
 
 ## Design reference
 
