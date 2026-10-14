@@ -1,0 +1,58 @@
+{
+  "browser": "155.0.8059.40",
+  "visual": {
+    "before": [
+      "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+      "6a33d9621a150283498da36b0435871603b93aa9e9f827893b4f6ad86366c97e",
+      "14fe9c36d349f83916f40b591244d7e0559e6e1385df488ced40523b29c1a214",
+      "aa2b4b4b94fb15d81aa76b5acbd82faac2f52b6931f50711471a8035ba9fcec4",
+      "a1316c3951a62759566723c92348739e6a9042ba6feb66d66d719bcaa22b90b3"
+    ],
+    "after": [
+      "7de3e963061f4f375f345f026a8429a54bb51b3722f92708a8721ddee81eef30",
+      "6a33d9621a150283498da36b0435871603b93aa9e9f827893b4f6ad86366c97e",
+      "14fe9c36d349f83916f40b591244d7e0559e6e1385df488ced40523b29c1a214",
+      "aa2b4b4b94fb15d81aa76b5acbd82faac2f52b6931f50711471a8035ba9fcec4",
+      "a1316c3951a62759566723c92348739e6a9042ba6feb66d66d719bcaa22b90b3"
+    ]
+  },
+  "performance": {
+    "before": {
+      "simulationMs": [
+        440.2999997138977,
+        428.5,
+        540.2999997138977
+      ],
+      "drawMs": [
+        55.59999990463257,
+        53.799999713897705,
+        53.5
+      ],
+      "heldAbilityClickWorks": false
+    },
+    "after": {
+      "simulationMs": [
+        224.40000009536743,
+        197.2000002861023,
+        206.5
+      ],
+      "drawMs": [
+        26.90000009536743,
+        24.40000009536743,
+        19.899999618530273
+      ],
+      "heldAbilityClickWorks": true
+    }
+  },
+  "checks": [
+    "five pixel-identical canvas views against baseline",
+    "ability click survives HUD refresh between pointer down/up",
+    "keyboard cast, mana cost, cooldown and button identity",
+    "resize reuses terrain canvas",
+    "right-click movement",
+    "shop armor cannot revive a dead Conqueror",
+    "spectating closes the shop",
+    "restart restores playable Vesper",
+    "no browser runtime errors; local assets loaded with remote fonts blocked"
+  ]
+}

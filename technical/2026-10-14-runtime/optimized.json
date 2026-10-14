@@ -1,0 +1,64 @@
+{
+  "node": "v24.21.0",
+  "platform": "darwin/arm64",
+  "samples": 3,
+  "maxRssMiB": 180.25,
+  "results": {
+    "simulation": {
+      "samplesMs": [
+        2404.808,
+        2397.865,
+        2366.928
+      ],
+      "medianMs": 2397.865,
+      "units": 76,
+      "simulatedSeconds": 99.99999999999724,
+      "stateSha256": "9ddf526714ce49fbf60747de223395b2f5281bd1fe356859ccad8556c68dcf2d"
+    },
+    "navigation": {
+      "samplesMs": [
+        24.429,
+        25.59,
+        24.939
+      ],
+      "medianMs": 24.939,
+      "units": 46,
+      "simulatedSeconds": 0,
+      "stateSha256": "a4474221ca741af8bef72e9a1a3f495a65710a6fcce655899d81a3dfd43f4736"
+    },
+    "targeting": {
+      "samplesMs": [
+        2093.597,
+        2081.07,
+        2071.661
+      ],
+      "medianMs": 2081.07,
+      "units": 480,
+      "simulatedSeconds": 4.999999999999981,
+      "stateSha256": "6bb302b0ede3175a3231ad8bff46c4852011926531754a5b169c6c350a450d53"
+    },
+    "render": {
+      "warmCanvasCalls": {
+        "setTransform": 1,
+        "clearRect": 1,
+        "fillRect": 49,
+        "translate": 7,
+        "scale": 1,
+        "beginPath": 243,
+        "ellipse": 136,
+        "fill": 226,
+        "moveTo": 40,
+        "lineTo": 91,
+        "stroke": 24,
+        "save": 5,
+        "rotate": 3,
+        "restore": 5,
+        "fillText": 5,
+        "closePath": 24,
+        "arc": 67,
+        "drawImage": 1,
+        "strokeRect": 1
+      }
+    }
+  }
+}

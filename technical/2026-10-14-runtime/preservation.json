@@ -1,0 +1,11 @@
+{
+  "originalBranch": "codex/gorilla-pc-handoff",
+  "baseCommit": "7c189fb",
+  "optimizationBranch": "codex/kingdom-runtime-optimization",
+  "worktree": "/tmp/critz-kingdom-runtime-optimization",
+  "originalCheckout": "/Users/tanoshi/Documents/ChatGPT/Critz-Kingdom Conquest",
+  "existingUserFilesVerifiedUnchanged": 229,
+  "pushOrDeploymentPerformed": false,
+  "repositoryInstructions": "No applicable AGENTS.md or local .agents/skills were present. Read README, PC_HANDOFF, prototype README, project plans, and the local memory summary for this repository.",
+  "resources": "No existing development servers were stopped; browser tests used an isolated Chrome profile and an ephemeral 127.0.0.1 port, closed after tests."
+}

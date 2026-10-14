@@ -1,0 +1,11 @@
+{
+  "before": {
+    "rawBytes": 57684,
+    "gzipBytes": 21199
+  },
+  "after": {
+    "rawBytes": 59307,
+    "gzipBytes": 21792
+  },
+  "notes": "Loaded HTML/CSS/JavaScript only; no bundler/build exists. Tests and art assets are not requested by the app. Gzip is calculated, not enabled by the local Python server."
+}

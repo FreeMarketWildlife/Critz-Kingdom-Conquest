@@ -1,0 +1,140 @@
+✖ experience cannot revive a dead nearby Conqueror (27.107125ms)
+✖ damage cancels recall for a Conqueror after selection changes (23.168375ms)
+✖ death clears transient movement and channel state (23.749792ms)
+✖ Flash cannot teleport a dead Conqueror or consume its cooldown (23.607208ms)
+✖ restart clears references and input state from the previous battle (45.052584ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.405917
+
+✖ failing tests:
+
+test at prototype/runtime.test.cjs:5:1
+✖ experience cannot revive a dead nearby Conqueror (27.107125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  160 !== 0
+  
+      at TestContext.<anonymous> (/private/tmp/critz-kingdom-runtime-optimization/prototype/runtime.test.cjs:15:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 160,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at prototype/runtime.test.cjs:19:1
+✖ damage cancels recall for a Conqueror after selection changes (23.168375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 0
+  
+      at TestContext.<anonymous> (/private/tmp/critz-kingdom-runtime-optimization/prototype/runtime.test.cjs:21:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at prototype/runtime.test.cjs:28:1
+✖ death clears transient movement and channel state (23.749792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  +   dash: {
+  +     left: 100,
+  +     x: 1,
+  +     y: 0
+  +   },
+  -   dash: null,
+      order: null,
+  +   path: [
+  +     {
+  +       x: 1800,
+  +       y: 1600
+  +     }
+  +   ],
+  -   path: [],
+      recall: 0
+    }
+  
+      at TestContext.<anonymous> (/private/tmp/critz-kingdom-runtime-optimization/prototype/runtime.test.cjs:30:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { recall: 0, dash: { x: 1, y: 0, left: 100 }, order: null, path: [ [Object] ] },
+    expected: { recall: 0, dash: null, order: null, path: [] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at prototype/runtime.test.cjs:38:1
+✖ Flash cannot teleport a dead Conqueror or consume its cooldown (23.607208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '[1650,1800,25]'
+  - '[1400,1800,0]'
+       ^
+  
+      at TestContext.<anonymous> (/private/tmp/critz-kingdom-runtime-optimization/prototype/runtime.test.cjs:43:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '[1650,1800,25]',
+    expected: '[1400,1800,0]',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at prototype/runtime.test.cjs:53:1
+✖ restart clears references and input state from the previous battle (45.052584ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (/private/tmp/critz-kingdom-runtime-optimization/prototype/runtime.test.cjs:56:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at node:internal/test_runner/test:1305:31
+      at node:internal/process/task_queues:151:7
+      at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+      at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
