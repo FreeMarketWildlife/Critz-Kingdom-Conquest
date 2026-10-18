@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "glb": {
+    "animations": [
+      "Theo_Challenge",
+      "Theo_GroundSlam",
+      "Theo_HeavyPunch",
+      "Theo_HitReact",
+      "Theo_Idle",
+      "Theo_Walk"
+    ],
+    "skin_joints": 39,
+    "meshes": 2,
+    "images": 3,
+    "bytes": 20524532,
+    "clips": {
+      "Theo_Challenge": {
+        "duration_seconds": 2.0,
+        "channels": 117
+      },
+      "Theo_GroundSlam": {
+        "duration_seconds": 1.5,
+        "channels": 117
+      },
+      "Theo_HeavyPunch": {
+        "duration_seconds": 1.0,
+        "channels": 117
+      },
+      "Theo_HitReact": {
+        "duration_seconds": 0.75,
+        "channels": 117
+      },
+      "Theo_Idle": {
+        "duration_seconds": 2.0,
+        "channels": 117
+      },
+      "Theo_Walk": {
+        "duration_seconds": 1.333333,
+        "channels": 117
+      }
+    },
+    "roundtrip_max_bounds_error_m": {
+      "Theo_Idle": 0.0,
+      "Theo_Walk": 0.0,
+      "Theo_HeavyPunch": 0.0,
+      "Theo_GroundSlam": 0.0,
+      "Theo_Challenge": 0.0,
+      "Theo_HitReact": 0.0
+    }
+  },
+  "fbx": {
+    "armatures": 1,
+    "meshes": 2,
+    "actions": [
+      {
+        "name": "Theo_Rig|Theo_Rig|Theo_Challenge",
+        "frames": [
+          1.0,
+          49.0
+        ]
+      },
+      {
+        "name": "Theo_Rig|Theo_Rig|Theo_GroundSlam",
+        "frames": [
+          1.0,
+          37.0
+        ]
+      },
+      {
+        "name": "Theo_Rig|Theo_Rig|Theo_HeavyPunch",
+        "frames": [
+          1.0,
+          25.0
+        ]
+      },
+      {
+        "name": "Theo_Rig|Theo_Rig|Theo_HitReact",
+        "frames": [
+          1.0,
+          19.0
+        ]
+      },
+      {
+        "name": "Theo_Rig|Theo_Rig|Theo_Idle",
+        "frames": [
+          1.0,
+          49.0
+        ]
+      },
+      {
+        "name": "Theo_Rig|Theo_Rig|Theo_Walk",
+        "frames": [
+          1.0,
+          33.0
+        ]
+      }
+    ],
+    "images": 2,
+    "bytes": 12908668
+  }
+}

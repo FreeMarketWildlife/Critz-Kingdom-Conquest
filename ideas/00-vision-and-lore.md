@@ -25,3 +25,13 @@
 ## Principles
 - Inspirations from people/other fiction serve as creative starting points. Avoid directly copying protected designs/likenesses in commercially released assets without appropriate clearance.
 - **Confirmed** = user decision; **Provisional** = unsettled user choice; **Suggested** = brainstorm, not approved.
+
+## First-generation era and the Spring of Life — confirmed
+
+Fairies were originally the only creatures with this level of intelligence. Their jealousy over power led to a battle atop Mount Yokai. Their blood stained the summit snow red. When the snow melted, the blood-bearing water flowed into the rivers: the **Spring of Life**, life flowing from death itself.
+
+Animals that tasted the fairy blood gained intelligence, language and more anthropomorphic qualities. Animals were already sentient; this was an awakening of higher reasoning and speech rather than the creation of sentience.
+
+All playable Conquerors in this game's era are **first generation**: they personally drank from those rivers. Over thousands of later years, later generations changed. Larger animals eventually lost their Feysian qualities, while the blood remained potent in smaller creatures for longer. The cause is unexplained. Do not invent later-generation mutations or a biological explanation.
+
+Lincoln, the Iron Fist, rules the jungles surrounding Mount Yokai. See [his confirmed character notes](conquerors/lincoln.md).

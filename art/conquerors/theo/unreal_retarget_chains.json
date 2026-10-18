@@ -1,0 +1,45 @@
+{
+  "retarget_root": "pelvis",
+  "spine": [
+    "spine_01",
+    "spine_02"
+  ],
+  "neck": [
+    "neck_01",
+    "head"
+  ],
+  "tail": [
+    "tail_01",
+    "tail_02",
+    "tail_03",
+    "tail_04",
+    "tail_05",
+    "tail_06"
+  ],
+  "arm_l": [
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l"
+  ],
+  "leg_l": [
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l"
+  ],
+  "weapon_socket_l": "socket_weapon_l",
+  "arm_r": [
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r"
+  ],
+  "leg_r": [
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r"
+  ],
+  "weapon_socket_r": "socket_weapon_r"
+}

@@ -1,0 +1,26 @@
+{
+  "selected_images": 30,
+  "unique_image_hashes": 30,
+  "allocation": {
+    "conqueror": 10,
+    "minion": 10,
+    "tower": 10
+  },
+  "individual_artist_review": "30/30",
+  "minion_bell_corrections": 6,
+  "map_visual_review": "rendered and visually inspected complete annotation layout",
+  "png_minimum_dimension": 1024,
+  "preserved_preexisting_tracked_files": {
+    "art/conquerors/gorilla/gorilla_rodin_rigged.blend": true,
+    "ideas/00-vision-and-lore.md": true,
+    "ideas/01-conqueror-roster.md": true,
+    "ideas/README.md": true
+  },
+  "gameplay_tests": "Not run: design specification only; values untested",
+  "meshy_paid_jobs": 0,
+  "public_publication": false,
+  "second_visual_critique": "All30 contact sheet plus13 full-resolution key references; root rechecked crab, Koolasuchus and corrected tower full resolution",
+  "second_design_critique": "Income/recall/item/recipient/unlock/occlusion issues corrected; see QA-DISPOSITION.md and RULES-CLARIFICATIONS.md",
+  "targeted_edits_total": 7,
+  "tower_emblem_corrections": 1
+}

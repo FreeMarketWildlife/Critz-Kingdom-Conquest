@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "original_six_max_bounds_difference_m": {
+    "Theo_Idle": 0.0,
+    "Theo_Walk": 0.0,
+    "Theo_HeavyPunch": 0.0,
+    "Theo_GroundSlam": 0.0,
+    "Theo_Challenge": 0.0,
+    "Theo_HitReact": 0.0
+  },
+  "glb_durations_seconds": {
+    "Theo_Challenge": 1.9999999999999998,
+    "Theo_CrackAbility": 3.0,
+    "Theo_GroundSlam": 1.5,
+    "Theo_HeavyPunch": 1.0,
+    "Theo_HitReact": 0.75,
+    "Theo_Idle": 1.9999999999999998,
+    "Theo_MoonshineDrink": 3.0,
+    "Theo_Walk": 1.3333333333333333
+  },
+  "glb_roundtrip_bounds_error_m": {
+    "Theo_Idle": 1.7881393432617188e-07,
+    "Theo_Walk": 1.7881393432617188e-07,
+    "Theo_HeavyPunch": 1.1920928955078125e-07,
+    "Theo_GroundSlam": 1.1920928955078125e-07,
+    "Theo_Challenge": 1.7881393432617188e-07,
+    "Theo_HitReact": 1.1920928955078125e-07,
+    "Theo_MoonshineDrink": 1.7881393432617188e-07,
+    "Theo_CrackAbility": 1.7881393432617188e-07
+  },
+  "prop_visibility_spans_m": {
+    "Theo_Idle": {
+      "Theo_Moonshine_Bottle": 2.1189451217651367e-05,
+      "Theo_Crack_Pipe": 1.2099742889404297e-05
+    },
+    "Theo_Walk": {
+      "Theo_Moonshine_Bottle": 2.1189451217651367e-05,
+      "Theo_Crack_Pipe": 1.2099742889404297e-05
+    },
+    "Theo_HeavyPunch": {
+      "Theo_Moonshine_Bottle": 2.014636993408203e-05,
+      "Theo_Crack_Pipe": 1.1026859283447266e-05
+    },
+    "Theo_GroundSlam": {
+      "Theo_Moonshine_Bottle": 2.1189451217651367e-05,
+      "Theo_Crack_Pipe": 1.2040138244628906e-05
+    },
+    "Theo_Challenge": {
+      "Theo_Moonshine_Bottle": 2.1219253540039062e-05,
+      "Theo_Crack_Pipe": 1.2099742889404297e-05
+    },
+    "Theo_HitReact": {
+      "Theo_Moonshine_Bottle": 2.1189451217651367e-05,
+      "Theo_Crack_Pipe": 1.2099742889404297e-05
+    },
+    "Theo_MoonshineDrink": {
+      "Theo_Moonshine_Bottle": 0.21106934547424316,
+      "Theo_Crack_Pipe": 1.0907649993896484e-05
+    },
+    "Theo_CrackAbility": {
+      "Theo_Moonshine_Bottle": 2.0563602447509766e-05,
+      "Theo_Crack_Pipe": 0.12031158804893494
+    }
+  },
+  "standalone_props": {
+    "theo_moonshine_bottle_v01": {
+      "meshes": 1,
+      "rig_required": false,
+      "animations": 0
+    },
+    "theo_crack_pipe_v01": {
+      "meshes": 1,
+      "rig_required": false,
+      "animations": 0
+    }
+  },
+  "fbx_actions": [
+    "Theo_Rig|Theo_Rig|Theo_Challenge",
+    "Theo_Rig|Theo_Rig|Theo_CrackAbility",
+    "Theo_Rig|Theo_Rig|Theo_GroundSlam",
+    "Theo_Rig|Theo_Rig|Theo_HeavyPunch",
+    "Theo_Rig|Theo_Rig|Theo_HitReact",
+    "Theo_Rig|Theo_Rig|Theo_Idle",
+    "Theo_Rig|Theo_Rig|Theo_MoonshineDrink",
+    "Theo_Rig|Theo_Rig|Theo_Walk"
+  ]
+}

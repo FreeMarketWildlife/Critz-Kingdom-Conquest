@@ -14,7 +14,7 @@ Working concepts, NOT necessarily launch roster. `TBD` means unresolved, not a r
 | 8 | Hyena | TBD | Stats near allies; lifesteal not decided |
 | 9 | Ram | TBD | Details open |
 | 10 | Bison/buffalo/ox/yak family — choose ONE | **Rose?** | Slow heavy upright bruiser, double axe possible; Roosevelt-inspired female Rose tentative |
-| 11 | Gorilla | TBD | Hulk-like powerhouse, not fire; Samson-inspired possibility |
+| 11 | Gorilla | **Lincoln** | The Iron Fist; noble first-generation Feysian silverback, jungle ruler and brute-strength brawler. See [character notes](conquerors/lincoln.md). |
 | 12 | Mandrill | TBD | Replaces generic baboon |
 | 13 | Sloth | TBD | Very slow, tree movement, potential attach-to-ally support |
 | 14 | Rhinoceros | TBD | Bruiser, javelin/axe possible |

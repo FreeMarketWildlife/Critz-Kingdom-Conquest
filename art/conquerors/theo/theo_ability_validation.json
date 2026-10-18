@@ -1,0 +1,32 @@
+{
+  "fps": 24,
+  "new_clips": {
+    "Theo_MoonshineDrink": {
+      "frames": 73,
+      "seconds": 3,
+      "nonfinite_values": 0,
+      "lowest_point_m": 0.000134,
+      "max_mouth_contact_error_m": 0.001,
+      "max_wrist_target_error_m": 0.002942
+    },
+    "Theo_CrackAbility": {
+      "frames": 73,
+      "seconds": 3,
+      "nonfinite_values": 0,
+      "lowest_point_m": 0.000218,
+      "max_mouth_contact_error_m": 1.3e-05,
+      "max_wrist_target_error_m": 0.003175
+    }
+  },
+  "props": {
+    "Theo_Moonshine_Bottle": {
+      "triangles": 152,
+      "separate_model": true
+    },
+    "Theo_Crack_Pipe": {
+      "triangles": 76,
+      "separate_model": true
+    }
+  },
+  "total_clips": 8
+}

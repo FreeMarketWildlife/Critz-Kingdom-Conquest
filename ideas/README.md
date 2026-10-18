@@ -8,3 +8,7 @@ This folder stores the evolving creator-directed design, **not finished producti
 4. [Minion factions and outstanding questions](03-minions-and-open-questions.md)
 
 Decisions are separated from suggestions. Voice-dictated names, the ancient tortoise's proper spelling, and undecided animal species are explicitly marked pending rather than guessed.
+
+Character interviews: [Lincoln — the Iron Fist](conquerors/lincoln.md).
+
+Reusable design workflow: [Conqueror Interview](Conqueror%20Interview.md). Use it for every Conqueror and adapt each round to their unique identity and kit.

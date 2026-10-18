@@ -1,0 +1,189 @@
+{
+  "vertices": 6201,
+  "triangles": 12467,
+  "deform_bones": 39,
+  "control_bones": 8,
+  "weapon_sockets": 2,
+  "fps": 24,
+  "height_m": 1.1,
+  "weight_errors": 0,
+  "max_vertex_influences": 4,
+  "actions": {
+    "Theo_Idle": {
+      "frames": 49,
+      "loop": true,
+      "nonfinite_values": 0,
+      "lowest_point_m": 0.00013,
+      "max_edge_stretch": 5.965,
+      "p99_edge_stretch": 1.27,
+      "endpoint_delta_m": 0.0,
+      "lowest_vertex": {
+        "frame": 37,
+        "index": 4421,
+        "rest": [
+          0.21420329809188843,
+          -0.1430514007806778,
+          4.121968595427461e-05
+        ],
+        "posed": [
+          0.21450014412403107,
+          -0.1429140567779541,
+          0.00013229213072918355
+        ],
+        "weights": {
+          "thigh_r": 0.0007830053218640387,
+          "calf_r": 0.03880400210618973,
+          "foot_r": 0.47139644622802734,
+          "ball_r": 0.4890165328979492
+        }
+      }
+    },
+    "Theo_Walk": {
+      "frames": 33,
+      "loop": true,
+      "nonfinite_values": 0,
+      "lowest_point_m": -0.00049,
+      "max_edge_stretch": 6.661,
+      "p99_edge_stretch": 1.34,
+      "endpoint_delta_m": 0.0,
+      "lowest_vertex": {
+        "frame": 4,
+        "index": 4421,
+        "rest": [
+          0.21420329809188843,
+          -0.1430514007806778,
+          4.121968595427461e-05
+        ],
+        "posed": [
+          0.2145911157131195,
+          -0.10790757834911346,
+          -0.0004928142880089581
+        ],
+        "weights": {
+          "thigh_r": 0.0007830053218640387,
+          "calf_r": 0.03880400210618973,
+          "foot_r": 0.47139644622802734,
+          "ball_r": 0.4890165328979492
+        }
+      }
+    },
+    "Theo_HeavyPunch": {
+      "frames": 25,
+      "loop": false,
+      "nonfinite_values": 0,
+      "lowest_point_m": -0.00054,
+      "max_edge_stretch": 17.179,
+      "p99_edge_stretch": 1.508,
+      "endpoint_delta_m": 0.0,
+      "lowest_vertex": {
+        "frame": 12,
+        "index": 4421,
+        "rest": [
+          0.21420329809188843,
+          -0.1430514007806778,
+          4.121968595427461e-05
+        ],
+        "posed": [
+          0.21462345123291016,
+          -0.14207471907138824,
+          -0.0005434284103102982
+        ],
+        "weights": {
+          "thigh_r": 0.0007830053218640387,
+          "calf_r": 0.03880400210618973,
+          "foot_r": 0.47139644622802734,
+          "ball_r": 0.4890165328979492
+        }
+      }
+    },
+    "Theo_GroundSlam": {
+      "frames": 37,
+      "loop": false,
+      "nonfinite_values": 0,
+      "lowest_point_m": -0.0008,
+      "max_edge_stretch": 18.213,
+      "p99_edge_stretch": 2.041,
+      "endpoint_delta_m": 0.0,
+      "lowest_vertex": {
+        "frame": 25,
+        "index": 4421,
+        "rest": [
+          0.21420329809188843,
+          -0.1430514007806778,
+          4.121968595427461e-05
+        ],
+        "posed": [
+          0.21491312980651855,
+          -0.1409270465373993,
+          -0.0007968152640387416
+        ],
+        "weights": {
+          "thigh_r": 0.0007830053218640387,
+          "calf_r": 0.03880400210618973,
+          "foot_r": 0.47139644622802734,
+          "ball_r": 0.4890165328979492
+        }
+      }
+    },
+    "Theo_Challenge": {
+      "frames": 49,
+      "loop": false,
+      "nonfinite_values": 0,
+      "lowest_point_m": 0.00022,
+      "max_edge_stretch": 11.92,
+      "p99_edge_stretch": 1.487,
+      "endpoint_delta_m": 0.0,
+      "lowest_vertex": {
+        "frame": 1,
+        "index": 4421,
+        "rest": [
+          0.21420329809188843,
+          -0.1430514007806778,
+          4.121968595427461e-05
+        ],
+        "posed": [
+          0.21448321640491486,
+          -0.14298978447914124,
+          0.0002176215930376202
+        ],
+        "weights": {
+          "thigh_r": 0.0007830053218640387,
+          "calf_r": 0.03880400210618973,
+          "foot_r": 0.47139644622802734,
+          "ball_r": 0.4890165328979492
+        }
+      }
+    },
+    "Theo_HitReact": {
+      "frames": 19,
+      "loop": false,
+      "nonfinite_values": 0,
+      "lowest_point_m": 0.00015,
+      "max_edge_stretch": 6.135,
+      "p99_edge_stretch": 1.325,
+      "endpoint_delta_m": 0.0,
+      "lowest_vertex": {
+        "frame": 11,
+        "index": 4421,
+        "rest": [
+          0.21420329809188843,
+          -0.1430514007806778,
+          4.121968595427461e-05
+        ],
+        "posed": [
+          0.21451961994171143,
+          -0.14292675256729126,
+          0.00015357512165792286
+        ],
+        "weights": {
+          "thigh_r": 0.0007830053218640387,
+          "calf_r": 0.03880400210618973,
+          "foot_r": 0.47139644622802734,
+          "ball_r": 0.4890165328979492
+        }
+      }
+    }
+  },
+  "game_rig_tools": "Registered all six clips",
+  "weighted_bones": 37
+}
